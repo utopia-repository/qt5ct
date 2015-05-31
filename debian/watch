@@ -1,2 +1,2 @@
 version=3
-http://simpleburn.tuxfamily.org/IMG/gz/simpleburn-(.*)\.tar\.gz
+http://sf.net/qt5ct/qt5ct-(\d\S*)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
