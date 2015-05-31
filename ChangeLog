@@ -1,0 +1,75 @@
+Changelog of the Qt5 Configuration Tool
+
+-----------
+Version 0.1
+* first test release
+
+Version 0.2
+* fixed palette preview
+* fixed preview window
+* fixed some widget positions
+* fixed Russian translation
+
+Version 0.3
+* added gui settings
+
+Version 0.4
+* added font config generation
+* fixed segmentation fault in the preview window
+* updated Russian translation
+
+Version 0.5
+* added dialog buttons layout setting
+* added feature to change install prefix
+* updated Russian translation
+
+Version 0.6
+* added style sheet settings
+* added transifex integration
+* updated Russian translation
+
+Version 0.7
+* added feature to rename style sheet
+* added context menu to the style sheet list
+* added feature to apply theme for running applications
+* added Chinese (Taiwan) translation (Jeff Huang)
+* added Czech translation (fri)
+* added German translation (Mario Blättermann)
+* updated Russian translation
+
+Version 0.8
+* improved icon theme parsing
+* added Bulgarian translation (Kiril Kirilov)
+* fixed plugin metadata
+* fixed font updating issue
+* fixed Russian translation
+
+Version 0.9
+* added more user friendly color roles
+* added feature to disable qss support
+* added Dutch (Netherlands) translation (Heimen Stoffels)
+* updated Chinese (Taiwan) translation (Jeff Huang)
+* updated Czech translation (fri)
+* updated Bulgarian translation (Kiril Kirilov)
+* updated German translation (Mario Blättermann)
+* updated Russian translation
+
+Version 0.10
+* added more debug messages
+* added Greek translation (Dimitrios Glentadakis)
+* moved home page to sf.net
+* fixed qss path
+
+Version 0.11
+* added Polish translation (FadeMind)
+* removed private headers usage
+* improved build scripts
+* fixed settings updating issue
+* fixed font setting
+* fixed fonts.conf generation
+* fixed segmentation fault on "widget-less" applications
+* updated German translation (Ettore Atalan)
+
+Version 0.12
+* added Chinese Simplified translation (Cary Tian)
+* fixed infinite loop in the icon theme parser (Sergey A. Sukiyazov)
