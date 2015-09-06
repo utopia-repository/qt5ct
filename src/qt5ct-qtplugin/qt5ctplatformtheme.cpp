@@ -44,6 +44,7 @@
 #include <QFileSystemWatcher>
 
 #include <qt5ct/qt5ct.h>
+#include "qt5ctproxystyle.h"
 #include "qt5ctplatformtheme.h"
 
 //QT_QPA_PLATFORMTHEME=qt5ct
@@ -55,7 +56,11 @@ Qt5CTPlatformTheme::Qt5CTPlatformTheme()
     QMetaObject::invokeMethod(this, "applySettings", Qt::QueuedConnection);
 #ifdef QT_WIDGETS_LIB
     QMetaObject::invokeMethod(this, "cteateFSWatcher", Qt::QueuedConnection);
+    //apply custom style hints before creating QApplication
+    //using Fusion style should avoid problems with some styles like qtcurve
+    QApplication::setStyle(new Qt5CTProxyStyle("Fusion"));
 #endif
+    QGuiApplication::setFont(m_generalFont);
     qDebug("using qt5ct plugin");
 }
 
@@ -107,13 +112,14 @@ void Qt5CTPlatformTheme::applySettings()
 #ifdef QT_WIDGETS_LIB
     if(hasWidgets())
     {
-        qApp->setStyle(m_style);
-        qApp->setStyleSheet(m_userStyleSheet);
+        qApp->setStyle(new Qt5CTProxyStyle(m_style));
         qApp->setFont(m_generalFont);
         if(m_customPalette)
             qApp->setPalette(*m_customPalette);
         else
             qApp->setPalette(qApp->style()->standardPalette());
+
+        qApp->setStyleSheet(m_userStyleSheet);
     }
 #endif
     QGuiApplication::setFont(m_generalFont); //apply font
@@ -200,6 +206,7 @@ void Qt5CTPlatformTheme::readSettings()
     m_cursorFlashTime = settings.value("cursor_flash_time", m_cursorFlashTime).toInt();
     m_buttonBoxLayout = QPlatformTheme::themeHint(QPlatformTheme::DialogButtonBoxLayout).toInt();
     m_buttonBoxLayout = settings.value("buttonbox_layout", m_buttonBoxLayout).toInt();
+    QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus, !settings.value("menus_have_icons", true).toBool());
 
     //load effects
     m_uiEffects = QPlatformTheme::themeHint(QPlatformTheme::UiEffects).toInt();

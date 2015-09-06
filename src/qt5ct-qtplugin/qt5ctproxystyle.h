@@ -26,33 +26,28 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef QT5CT_H
-#define QT5CT_H
+#ifndef QT5CTPROXYSTYLE_H
+#define QT5CTPROXYSTYLE_H
 
-#define QT5CT_VERSION_MAJOR 0
-#define QT5CT_VERSION_MINOR 15
+#ifdef QT_WIDGETS_LIB
 
-#define QT5CT_TOSTRING(s) #s
-#define QT5CT_STRINGIFY(s)         QT5CT_TOSTRING(s)
+#include <QProxyStyle>
 
-#define QT5CT_VERSION_INT (QT5CT_VERSION_MAJOR<<8 | QT5CT_VERSION_MINOR)
-#define QT5CT_VERSION_STR QT5CT_STRINGIFY(QT5CT_VERSION_MAJOR.QT5CT_VERSION_MINOR)
-
-#include <QString>
-#include <QStringList>
-
-class Qt5CT
+class Qt5CTProxyStyle : public QProxyStyle
 {
+    Q_OBJECT
 public:
-    static QString configPath();
-    static QString configFile();
-    static QStringList iconPaths();
-    static QString userStyleSheetPath();
-    static QString sharedStyleSheetPath();
-    static QString systemLanguageID();
+    explicit Qt5CTProxyStyle(const QString &key);
+
+    virtual ~Qt5CTProxyStyle();
+
+    int styleHint(StyleHint hint, const QStyleOption *option, const QWidget *widget, QStyleHintReturn *returnData) const;
 
 private:
-    Qt5CT() {}
+    int m_dialogButtonsHaveIcons;
+
 };
 
-#endif // QT5CT_H
+#endif //QT_WIDGETS_LIB
+
+#endif // QT5CTPROXYSTYLE_H
