@@ -240,6 +240,16 @@
         <source>Dialog buttons layout:</source>
         <translation>Volgorde van dialoogvensterknoppen:</translation>
     </message>
+    <message>
+        <location filename="../interfacepage.ui" line="179"/>
+        <source>Menus have icons</source>
+        <translation>Menu&apos;s voorzien van pictogrammen</translation>
+    </message>
+    <message>
+        <location filename="../interfacepage.ui" line="186"/>
+        <source>Dialog buttons have icons</source>
+        <translation>Dialoogvensterknoppen voorzien van pictogrammen</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>

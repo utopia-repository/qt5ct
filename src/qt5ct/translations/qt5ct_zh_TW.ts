@@ -240,6 +240,16 @@
         <source>Dialog buttons layout:</source>
         <translation>對話框按鈕佈局：</translation>
     </message>
+    <message>
+        <location filename="../interfacepage.ui" line="179"/>
+        <source>Menus have icons</source>
+        <translation>有圖示的選單</translation>
+    </message>
+    <message>
+        <location filename="../interfacepage.ui" line="186"/>
+        <source>Dialog buttons have icons</source>
+        <translation>有圖示的對話框按鈕</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
