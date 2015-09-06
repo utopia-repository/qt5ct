@@ -1,5 +1,5 @@
-qt5ct (0.12-1) UNRELEASED; urgency=low
+qt5ct (0.15-1) unstable; urgency=low
 
-  * Initial release. (Closes: #)
+  * Initial release.
 
- -- Mateusz Łukasik <mati75@linuxmint.pl>  Sun, 31 May 2015 12:14:12 +0200
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Sun, 06 Sep 2015 19:54:10 +0200
