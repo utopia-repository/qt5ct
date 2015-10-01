@@ -30,7 +30,7 @@
 #define QT5CT_H
 
 #define QT5CT_VERSION_MAJOR 0
-#define QT5CT_VERSION_MINOR 17
+#define QT5CT_VERSION_MINOR 19
 
 #define QT5CT_TOSTRING(s) #s
 #define QT5CT_STRINGIFY(s)         QT5CT_TOSTRING(s)
@@ -49,6 +49,8 @@ public:
     static QStringList iconPaths();
     static QString userStyleSheetPath();
     static QString sharedStyleSheetPath();
+    static QString userColorSchemePath();
+    static QString sharedColorSchemePath();
     static QString systemLanguageID();
 
 private:

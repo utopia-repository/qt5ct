@@ -99,3 +99,18 @@ Version 0.16
 Version 0.17
 * fixed crash in qupzilla
 * updated Greek translation (Dimitrios Glentadakis)
+
+Version 0.18
+* added color schemes support
+* updated Dutch (Netherlands) translation (Heimen Stoffels)
+* updated German translation (Ettore Atalan)
+* updated Polish translation (FadeMind)
+* updated Chinese (Taiwan) translation (Jeff Huang)
+* updated Russian translation
+
+Version 0.19
+* added feature to save geometry of the style sheet editor
+* fixed qt5ct.desktop
+* updated Greek translation (Dimitrios Glentadakis)
+* updated Czech translation (fri)
+* updated Chinese Simplified translation (Cary Tian)

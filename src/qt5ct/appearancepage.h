@@ -37,6 +37,7 @@ class PreviewForm;
 }
 
 class QStyle;
+class QAction;
 
 class AppearancePage : public TabPage
 {
@@ -50,17 +51,27 @@ public:
 
 private slots:
     void on_styleComboBox_activated(const QString &text);
+    void on_colorSchemeComboBox_activated(int);
+    void createColorScheme();
+    void changeColorScheme();
+    void removeColorScheme();
+    void copyColorScheme();
+    void renameColorScheme();
     void updatePalette();
-    void on_changePaletteButton_clicked();
+    void updateActions();
 
 private:
     void readSettings();
     void setStyle(QWidget *w, QStyle *s);
     void setPalette(QWidget *w, QPalette p);
+    void findColorSchemes(const QString &path);
+    QPalette loadColorScheme(const QString &filePath);
+    void createColorScheme(const QString &name, const QPalette &palette);
     Ui::AppearancePage *m_ui;
     QStyle *m_selectedStyle;
     QPalette m_customPalette;
     QWidget *m_previewWidget;
+    QAction *m_changeColorSchemeAction, *m_renameColorSchemeAction, *m_removeColorSchemeAction;
     Ui::PreviewForm *m_previewUi;
 };
 
