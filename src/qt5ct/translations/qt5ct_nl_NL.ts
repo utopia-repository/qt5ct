@@ -29,24 +29,111 @@
         <translation>Uitgeschakeld kleurenschema</translation>
     </message>
     <message>
-        <location filename="../appearancepage.ui" line="75"/>
+        <location filename="../appearancepage.ui" line="91"/>
         <source>Palette</source>
         <translation>Kleurenschema</translation>
     </message>
     <message>
-        <location filename="../appearancepage.ui" line="81"/>
+        <location filename="../appearancepage.ui" line="102"/>
         <source>Default</source>
         <translation>Standaard</translation>
     </message>
     <message>
-        <location filename="../appearancepage.ui" line="91"/>
+        <location filename="../appearancepage.ui" line="112"/>
         <source>Custom</source>
         <translation>Aangepast</translation>
     </message>
     <message>
-        <location filename="../appearancepage.ui" line="101"/>
-        <source>Change...</source>
-        <translation>Wijzigen...</translation>
+        <location filename="../appearancepage.ui" line="139"/>
+        <source>Color scheme:</source>
+        <translation>Kleurenschema:</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.ui" line="162"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="64"/>
+        <source>Create</source>
+        <translation>Creëren</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="65"/>
+        <source>Edit</source>
+        <translation>Bewerken</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="66"/>
+        <source>Create a Copy</source>
+        <translation>Een kopie creëren</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="67"/>
+        <source>Rename</source>
+        <translation>Hernoemen</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="69"/>
+        <source>Remove</source>
+        <translation>Verwijderen</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="116"/>
+        <location filename="../appearancepage.cpp" line="189"/>
+        <location filename="../appearancepage.cpp" line="224"/>
+        <source>Enter Color Scheme Name</source>
+        <translation>Voer een naam in voor dit kleurenschema</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="116"/>
+        <location filename="../appearancepage.cpp" line="189"/>
+        <location filename="../appearancepage.cpp" line="224"/>
+        <source>File name:</source>
+        <translation>Bestandsnaam:</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="125"/>
+        <location filename="../appearancepage.cpp" line="200"/>
+        <location filename="../appearancepage.cpp" line="234"/>
+        <source>Error</source>
+        <translation>Fout</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="125"/>
+        <location filename="../appearancepage.cpp" line="200"/>
+        <location filename="../appearancepage.cpp" line="234"/>
+        <source>The color scheme &quot;%1&quot; already exists</source>
+        <translation>Het kleurenschema &quot;%1&quot; bestaat al</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="165"/>
+        <location filename="../appearancepage.cpp" line="219"/>
+        <source>Warning</source>
+        <translation>Waarschuwing</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="165"/>
+        <location filename="../appearancepage.cpp" line="219"/>
+        <source>The color scheme &quot;%1&quot; is read only</source>
+        <translation>Het kleurenschema &quot;%1&quot; is alleen-lezen</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <source>Confirm Remove</source>
+        <translation>Verwijderen bevestigen</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="171"/>
+        <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
+        <translation>Weet u zeker dat kleurenschema &quot;%1&quot; wilt verwijderen?</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="191"/>
+        <source>%1 (copy)</source>
+        <translation>%1 (kopie)</translation>
     </message>
 </context>
 <context>
@@ -532,7 +619,7 @@
     </message>
     <message>
         <location filename="../qsspage.cpp" line="143"/>
-        <source>Are you shure you want to remove style sheet &quot;%1&quot;?</source>
+        <source>Are you sure you want to remove style sheet &quot;%1&quot;?</source>
         <translation>Weet u zeker dat u stijlblad &quot;%1&quot; wilt verwijderen?</translation>
     </message>
     <message>

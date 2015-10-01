@@ -29,24 +29,111 @@
         <translation>Deaktivierte Palette</translation>
     </message>
     <message>
-        <location filename="../appearancepage.ui" line="75"/>
+        <location filename="../appearancepage.ui" line="91"/>
         <source>Palette</source>
         <translation>Palette</translation>
     </message>
     <message>
-        <location filename="../appearancepage.ui" line="81"/>
+        <location filename="../appearancepage.ui" line="102"/>
         <source>Default</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../appearancepage.ui" line="91"/>
+        <location filename="../appearancepage.ui" line="112"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
     <message>
-        <location filename="../appearancepage.ui" line="101"/>
-        <source>Change...</source>
-        <translation>Ändern …</translation>
+        <location filename="../appearancepage.ui" line="139"/>
+        <source>Color scheme:</source>
+        <translation>Farbschema:</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.ui" line="162"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="64"/>
+        <source>Create</source>
+        <translation>Erstellen</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="65"/>
+        <source>Edit</source>
+        <translation>Bearbeiten</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="66"/>
+        <source>Create a Copy</source>
+        <translation>Erstellen Sie eine Kopie</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="67"/>
+        <source>Rename</source>
+        <translation>Umbenennen</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="69"/>
+        <source>Remove</source>
+        <translation>Entfernen</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="116"/>
+        <location filename="../appearancepage.cpp" line="189"/>
+        <location filename="../appearancepage.cpp" line="224"/>
+        <source>Enter Color Scheme Name</source>
+        <translation>Farbschemaname eingeben</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="116"/>
+        <location filename="../appearancepage.cpp" line="189"/>
+        <location filename="../appearancepage.cpp" line="224"/>
+        <source>File name:</source>
+        <translation>Dateiname:</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="125"/>
+        <location filename="../appearancepage.cpp" line="200"/>
+        <location filename="../appearancepage.cpp" line="234"/>
+        <source>Error</source>
+        <translation>Fehler</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="125"/>
+        <location filename="../appearancepage.cpp" line="200"/>
+        <location filename="../appearancepage.cpp" line="234"/>
+        <source>The color scheme &quot;%1&quot; already exists</source>
+        <translation>Das Farbschema »%1« ist bereits vorhanden</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="165"/>
+        <location filename="../appearancepage.cpp" line="219"/>
+        <source>Warning</source>
+        <translation>Warnung</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="143"/>
+        <location filename="../appearancepage.cpp" line="165"/>
+        <location filename="../appearancepage.cpp" line="219"/>
+        <source>The color scheme &quot;%1&quot; is read only</source>
+        <translation>Das Farbschema »%1« ist schreibgeschützt</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <source>Confirm Remove</source>
+        <translation>Entfernen bestätigen</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="171"/>
+        <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
+        <translation>Sind Sie sicher, dass Sie das Farbschema »%1« entfernen möchten?</translation>
+    </message>
+    <message>
+        <location filename="../appearancepage.cpp" line="191"/>
+        <source>%1 (copy)</source>
+        <translation>%1 (kopieren)</translation>
     </message>
 </context>
 <context>
@@ -511,7 +598,7 @@
     <message>
         <location filename="../qsspage.cpp" line="97"/>
         <source>Enter Style Sheet Name</source>
-        <translation>Name der Stilvorlage eingeben</translation>
+        <translation>Stilvorlagenname eingeben</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="108"/>
@@ -532,8 +619,8 @@
     </message>
     <message>
         <location filename="../qsspage.cpp" line="143"/>
-        <source>Are you shure you want to remove style sheet &quot;%1&quot;?</source>
-        <translation>Sind Sie sicher, dass Sie die Stilvorlage »%1« entfernen wollen?</translation>
+        <source>Are you sure you want to remove style sheet &quot;%1&quot;?</source>
+        <translation>Sind Sie sicher, dass Sie die Stilvorlage »%1« entfernen möchten?</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="193"/>
@@ -543,7 +630,7 @@
     <message>
         <location filename="../qsspage.cpp" line="193"/>
         <source>Style sheet name:</source>
-        <translation>Name der Stilvorlage:</translation>
+        <translation>Stilvorlagenname:</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="200"/>
