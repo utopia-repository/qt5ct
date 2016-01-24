@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+	configure)
+			echo "After install this package, please, add the following"
+			echo "line into the ~/.xprofile (user) or /etc/environment (system):"
+			echo "export QT_QPA_PLATFORMTHEME=qt5ct"
+			echo "and it will work."
+		;;
+esac
+
+#DEBHELPER#
+
