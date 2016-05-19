@@ -1,9 +1,9 @@
-qt5ct (0.23-1) UNRELEASED; urgency=medium
+qt5ct (0.23-1) unstable; urgency=medium
 
   * New upstream release.
   * Bump Standards-Version to 3.9.8. (no changes needed)
 
- -- Mateusz Łukasik <mati75@linuxmint.pl>  Thu, 19 May 2016 10:22:51 +0200
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Thu, 19 May 2016 10:24:18 +0200
 
 qt5ct (0.22-1) unstable; urgency=medium
 
