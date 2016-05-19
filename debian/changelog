@@ -1,3 +1,9 @@
+qt5ct (0.23-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Thu, 19 May 2016 10:22:51 +0200
+
 qt5ct (0.22-1) unstable; urgency=medium
 
   * New upstream release.
