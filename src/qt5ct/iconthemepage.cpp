@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2015, Ilya Kotov <forkotov02@hotmail.ru>
+ * Copyright (c) 2014-2016, Ilya Kotov <forkotov02@hotmail.ru>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -158,6 +158,7 @@ QIcon IconThemePage::findIcon(const QString &themePath, int size, const QString 
     config.beginGroup("Icon Theme");
     QStringList dirs = config.value("Directories").toStringList();
     QStringList parents = config.value("Inherits").toStringList();
+    bool haveInherits = config.contains("Inherits");
     config.endGroup();
 
     foreach (QString dir, dirs)
@@ -189,6 +190,9 @@ QIcon IconThemePage::findIcon(const QString &themePath, int size, const QString 
         }
         config.endGroup();
     }
+
+    if (!haveInherits)
+        return QIcon();
 
     parents.append("hicolor"); //add fallback themes
     parents.append("gnome");
