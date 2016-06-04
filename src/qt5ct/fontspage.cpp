@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2015, Ilya Kotov <forkotov02@hotmail.ru>
+ * Copyright (c) 2014-2016, Ilya Kotov <forkotov02@hotmail.ru>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -52,6 +52,10 @@ FontsPage::FontsPage(QWidget *parent) :
     connect(mapper, SIGNAL(mapped(QWidget*)), SLOT(onFontChangeRequested(QWidget*)));
 
     readSettings();
+
+    //icons
+    m_ui->createFontsConfButton->setIcon(QIcon::fromTheme("document-new"));
+    m_ui->removeFontsConfButton->setIcon(QIcon::fromTheme("edit-delete"));
 }
 
 FontsPage::~FontsPage()
