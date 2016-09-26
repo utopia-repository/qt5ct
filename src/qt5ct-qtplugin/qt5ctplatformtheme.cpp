@@ -29,7 +29,6 @@
 #include <QVariant>
 #include <QSettings>
 #include <QGuiApplication>
-#include <QDebug>
 #include <QScreen>
 #include <QFont>
 #include <QPalette>
@@ -43,10 +42,15 @@
 #endif
 #include <QFile>
 #include <QFileSystemWatcher>
+#if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
+#include <private/qdbustrayicon_p.h>
+#endif
 
 #include <qt5ct/qt5ct.h>
 #include "qt5ctproxystyle.h"
 #include "qt5ctplatformtheme.h"
+
+Q_LOGGING_CATEGORY(lqt5ct, "qt5ct")
 
 //QT_QPA_PLATFORMTHEME=qt5ct
 
@@ -55,6 +59,10 @@ Qt5CTPlatformTheme::Qt5CTPlatformTheme()
     m_customPalette = 0;
     m_update = false;
     m_usePalette = true;
+#if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
+    m_dbusTrayAvailable = false;
+    m_checkDBusTray = true;
+#endif
     if(QGuiApplication::desktopSettingsAware())
     {
         readSettings();
@@ -67,7 +75,7 @@ Qt5CTPlatformTheme::Qt5CTPlatformTheme()
 #endif
         QGuiApplication::setFont(m_generalFont);
     }
-    qDebug("using qt5ct plugin");
+    qCDebug(lqt5ct) << "using qt5ct plugin";
 }
 
 Qt5CTPlatformTheme::~Qt5CTPlatformTheme()
@@ -75,6 +83,20 @@ Qt5CTPlatformTheme::~Qt5CTPlatformTheme()
     if(m_customPalette)
         delete m_customPalette;
 }
+
+#if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
+QPlatformSystemTrayIcon *Qt5CTPlatformTheme::createPlatformSystemTrayIcon() const
+{
+    if(m_checkDBusTray)
+    {
+        QDBusMenuConnection conn;
+        m_dbusTrayAvailable = conn.isStatusNotifierHostRegistered();
+        m_checkDBusTray = false;
+        qCDebug(lqt5ct) << "D-Bus system tray:" << (m_dbusTrayAvailable ? "yes" : "no");
+    }
+    return (m_dbusTrayAvailable ? new QDBusTrayIcon() : 0);
+}
+#endif
 
 const QPalette *Qt5CTPlatformTheme::palette(QPlatformTheme::Palette type) const
 {
@@ -124,7 +146,7 @@ void Qt5CTPlatformTheme::applySettings()
         if(QCoreApplication::testAttribute(Qt::AA_SetPalette))
         {
             m_usePalette = false;
-            qDebug("qt5ct: palette support is disabled");
+            qCDebug(lqt5ct) << "palette support is disabled";
         }
         m_update = true;
     }
@@ -149,7 +171,7 @@ void Qt5CTPlatformTheme::applySettings()
         if(m_prevStyleSheet == qApp->styleSheet())
             qApp->setStyleSheet(m_userStyleSheet);
         else
-            qDebug("qt5ct: custom style sheet is disabled");
+            qCDebug(lqt5ct) << "custom style sheet is disabled";
         m_prevStyleSheet = m_userStyleSheet;
     }
 #endif
@@ -185,7 +207,7 @@ void Qt5CTPlatformTheme::createFSWatcher()
 
 void Qt5CTPlatformTheme::updateSettings()
 {
-    qDebug("Qt5CTPlatformTheme: updating settings..");
+    qCDebug(lqt5ct) << "updating settings..";
     readSettings();
     applySettings();
 }
