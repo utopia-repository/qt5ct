@@ -1,9 +1,10 @@
-qt5ct (0.27-1) UNRELEASED; urgency=medium
+qt5ct (0.27-1) unstable; urgency=medium
 
   * New upstream release.
   * Bump debhelper version to 10.
+  * Update B-D.
 
- -- Mateusz Łukasik <mati75@linuxmint.pl>  Mon, 26 Sep 2016 15:34:46 +0200
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Mon, 26 Sep 2016 15:36:09 +0200
 
 qt5ct (0.26-1) unstable; urgency=medium
 
