@@ -3,7 +3,9 @@ Section: utils
 Priority: extra
 Maintainer: Mateusz Łukasik <mati75@linuxmint.pl>
 Build-Depends: debhelper (>= 10), qtbase5-dev, libqt5svg5-dev,
- qttools5-dev-tools, qtbase5-private-dev
+ qttools5-dev-tools, qtbase5-private-dev, libfontconfig1-dev,
+ libfreetype6-dev, libglib2.0-dev, libxrender-dev, libudev-dev,
+ libmtdev-dev, libegl1-mesa-dev
 Standards-Version: 3.9.8
 Homepage: http://sourceforge.net/projects/qt5ct/
 Vcs-Git: https://github.com/mati75/qt5ct.git
