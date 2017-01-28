@@ -1,6 +1,7 @@
 qt5ct (0.29-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * d/control: Add qt5-style-plugins to suggests.
 
  -- Mateusz Łukasik <mati75@linuxmint.pl>  Sat, 28 Jan 2017 13:57:30 +0100
 
