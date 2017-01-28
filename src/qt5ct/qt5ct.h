@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2016, Ilya Kotov <forkotov02@hotmail.ru>
+ * Copyright (c) 2014-2017, Ilya Kotov <forkotov02@hotmail.ru>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -30,7 +30,7 @@
 #define QT5CT_H
 
 #define QT5CT_VERSION_MAJOR 0
-#define QT5CT_VERSION_MINOR 27
+#define QT5CT_VERSION_MINOR 29
 
 #define QT5CT_TOSTRING(s) #s
 #define QT5CT_STRINGIFY(s)         QT5CT_TOSTRING(s)

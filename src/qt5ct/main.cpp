@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2016, Ilya Kotov <forkotov02@hotmail.ru>
+ * Copyright (c) 2014-2017, Ilya Kotov <forkotov02@hotmail.ru>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -33,12 +33,12 @@
 #include <QTranslator>
 #include <QMessageBox>
 #include <QProcessEnvironment>
+#include <QStyleFactory>
 #include "mainwindow.h"
 
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-
     QTranslator translator;
     QString locale = Qt5CT::systemLanguageID();
     translator.load(QString(":/qt5ct_") + locale);
@@ -64,6 +64,11 @@ int main(int argc, char **argv)
     {
         errorMessages << app.translate("main", "The <b>QT_QPA_PLATFORMTHEME</b> environment "
                                                "variable is not set correctly");
+    }
+
+    if(!QStyleFactory::keys().contains("qt5ct-style"))
+    {
+        errorMessages << app.translate("main", "Unable to find <b>libqt5ct-style.so</b>");
     }
 
     if(!errorMessages.isEmpty())

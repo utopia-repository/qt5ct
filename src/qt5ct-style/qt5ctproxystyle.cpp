@@ -26,32 +26,38 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef ICONTHEMEPAGE_H
-#define ICONTHEMEPAGE_H
+#include <QSettings>
+#include <qt5ct/qt5ct.h>
+#include "qt5ctproxystyle.h"
 
-#include <QIcon>
-#include "tabpage.h"
-
-namespace Ui {
-class IconThemePage;
+Qt5CTProxyStyle::Qt5CTProxyStyle(const QString &key) :
+    QProxyStyle(key)
+{
+    QSettings settings(Qt5CT::configFile(), QSettings::IniFormat);
+    m_dialogButtonsHaveIcons = settings.value("Interface/dialog_buttons_have_icons", Qt::PartiallyChecked).toInt();
+    m_activateItemOnSingleClick = settings.value("Interface/activate_item_on_single_click", Qt::PartiallyChecked).toInt();
 }
 
-class IconThemePage : public TabPage
+Qt5CTProxyStyle::~Qt5CTProxyStyle()
 {
-    Q_OBJECT
+    //qDebug("%s", Q_FUNC_INFO);
+}
 
-public:
-    explicit IconThemePage(QWidget *parent = 0);
-    ~IconThemePage();
-
-    void writeSettings();
-
-private:
-    void readSettings();
-    void loadThemes();
-    void loadTheme(const QString &path);
-    QIcon findIcon(const QString &themePath, int size, const QString &name);
-    Ui::IconThemePage *m_ui;
-};
-
-#endif // ICONTHEMEPAGE_H
+int Qt5CTProxyStyle::styleHint(QStyle::StyleHint hint, const QStyleOption *option, const QWidget *widget, QStyleHintReturn *returnData) const
+{
+    if(hint == QStyle::SH_DialogButtonBox_ButtonsHaveIcons)
+    {
+        if(m_dialogButtonsHaveIcons == Qt::Unchecked)
+            return 0;
+        else if(m_dialogButtonsHaveIcons == Qt::Checked)
+            return 1;
+    }
+    else if(hint == QStyle::QStyle::SH_ItemView_ActivateItemOnSingleClick)
+    {
+        if(m_activateItemOnSingleClick == Qt::Unchecked)
+            return 0;
+        else if(m_activateItemOnSingleClick == Qt::Checked)
+            return 1;
+    }
+    return QProxyStyle::styleHint(hint, option, widget, returnData);
+}
