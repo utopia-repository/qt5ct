@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2016, Ilya Kotov <forkotov02@hotmail.ru>
+ * Copyright (c) 2014-2017, Ilya Kotov <forkotov02@hotmail.ru>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -26,42 +26,31 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifdef QT_WIDGETS_LIB
-
+#include <QStylePlugin>
 #include <QSettings>
 #include <qt5ct/qt5ct.h>
 #include "qt5ctproxystyle.h"
 
-Qt5CTProxyStyle::Qt5CTProxyStyle(const QString &key) :
-    QProxyStyle(key)
+class Qt5CTStylePlugin : public QStylePlugin
 {
-    QSettings settings(Qt5CT::configFile(), QSettings::IniFormat);
-    m_dialogButtonsHaveIcons = settings.value("Interface/dialog_buttons_have_icons", Qt::PartiallyChecked).toInt();
-    m_activateItemOnSingleClick = settings.value("Interface/activate_item_on_single_click", Qt::PartiallyChecked).toInt();
-}
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QStyleFactoryInterface" FILE "qt5ct.json")
 
-Qt5CTProxyStyle::~Qt5CTProxyStyle()
-{
-    //qDebug("%s", Q_FUNC_INFO);
-}
+public:
+    QStyle *create(const QString &key);
+};
 
-int Qt5CTProxyStyle::styleHint(QStyle::StyleHint hint, const QStyleOption *option, const QWidget *widget, QStyleHintReturn *returnData) const
+QStyle *Qt5CTStylePlugin::create(const QString &key)
 {
-    if(hint == QStyle::SH_DialogButtonBox_ButtonsHaveIcons)
+    if (key == "qt5ct-style")
     {
-        if(m_dialogButtonsHaveIcons == Qt::Unchecked)
-            return 0;
-        else if(m_dialogButtonsHaveIcons == Qt::Checked)
-            return 1;
+        QSettings settings(Qt5CT::configFile(), QSettings::IniFormat);
+        QString style = settings.value("Appearance/style", "Fusion").toString();
+        if(key == style)
+            style = "Fusion";
+        return new Qt5CTProxyStyle(style);
     }
-    else if(hint == QStyle::QStyle::SH_ItemView_ActivateItemOnSingleClick)
-    {
-        if(m_activateItemOnSingleClick == Qt::Unchecked)
-            return 0;
-        else if(m_activateItemOnSingleClick == Qt::Checked)
-            return 1;
-    }
-    return QProxyStyle::styleHint(hint, option, widget, returnData);
+    return 0;
 }
 
-#endif //QT_WIDGETS_LIB
+#include "plugin.moc"

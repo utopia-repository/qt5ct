@@ -4,13 +4,16 @@ TEMPLATE = lib
 TARGET = qt5ct
 CONFIG += plugin
 
-QT += gui-private platformsupport-private
+greaterThan(QT_MINOR_VERSION, 7) {
+  QT += gui-private theme_support-private
+} else {
+  QT += gui-private platformsupport-private
+}
 
 SOURCES += \
     main.cpp \
     qt5ctplatformtheme.cpp \
-    ../qt5ct/qt5ct.cpp \
-    qt5ctproxystyle.cpp
+    ../qt5ct/qt5ct.cpp
 
 !equals (DISABLE_WIDGETS,1) {
    QT += widgets
@@ -22,9 +25,8 @@ INCLUDEPATH += ../
 
 HEADERS += \
     qt5ctplatformtheme.h \
-    ../qt5ct/qt5ct.h \
-    qt5ctproxystyle.h
+    ../qt5ct/qt5ct.h
 
-target.path = $$PLUGINDIR
+target.path = $$PLUGINDIR/platformthemes
 INSTALLS += target
 

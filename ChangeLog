@@ -152,7 +152,7 @@ Version 0.24
 
 Version 0.25
 * added environment variables verification
-* added Frensh translation (Geiger David)
+* added French translation (Geiger David)
 * updated Slovak translation (Ján Ďanovský)
 * updated Russian translation
 * updated Czech translation (fri)
@@ -170,3 +170,19 @@ Version 0.27
 * added D-Bus tray support
 * added feature to disable debug output
 * updated documentation
+
+Version 0.28
+* added Qt 5.8 support
+* added qt5ct proxy-style plugin
+* added Serbian translation (markosm)
+* updated Bulgarian translation (Kiril Kirilov)
+* updated Italian translation (Luigi Baldoni)
+* updated Russian translation
+* updated Dutch (Netherlands) translation (Heimen Stoffels)
+* updated Czech translation (fri)
+* updated German translation (Atalanttore)
+* updated Chinese (Taiwan) translation (Jeff Huang)
+
+Version 0.29
+* fixed libqt5ct-style.so installation path (Philip Müller)
+* updated Greek translation (Dimitrios Glentadakis)
