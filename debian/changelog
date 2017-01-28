@@ -1,11 +1,11 @@
-qt5ct (0.29-1) UNRELEASED; urgency=medium
+qt5ct (0.29-1) unstable; urgency=medium
 
   * New upstream release.
   * d/control: Add qt5-style-plugins to suggests.
   * Add qt5ct-fix-color-scheme.patch
     (https://sourceforge.net/p/qt5ct/tickets/32/)
 
- -- Mateusz Łukasik <mati75@linuxmint.pl>  Sat, 28 Jan 2017 13:57:30 +0100
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Sat, 28 Jan 2017 14:02:31 +0100
 
 qt5ct (0.27-1) unstable; urgency=medium
 
