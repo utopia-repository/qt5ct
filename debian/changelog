@@ -1,3 +1,9 @@
+qt5ct (0.30-2) unstable; urgency=medium
+
+  * Fix FTBFS on non-linux arches.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Sun, 12 Feb 2017 09:02:54 +0100
+
 qt5ct (0.30-1) unstable; urgency=medium
 
   * New upstream release.
