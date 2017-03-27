@@ -1,3 +1,9 @@
+qt5ct (0.30-2~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Sun, 26 Mar 2017 23:22:05 +0200
+
 qt5ct (0.30-2) unstable; urgency=medium
 
   * Fix FTBFS on non-linux arches.
@@ -57,7 +63,6 @@ qt5ct (0.22-1) unstable; urgency=medium
   * New upstream release.
 
  -- Mateusz Łukasik <mati75@linuxmint.pl>  Tue, 08 Mar 2016 22:00:01 +0100
->>>>>>> master
 
 qt5ct (0.21-1) unstable; urgency=medium
 
