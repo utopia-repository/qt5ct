@@ -54,84 +54,84 @@
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="64"/>
+        <location filename="../appearancepage.cpp" line="67"/>
         <source>Create</source>
         <translation>Создать</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="65"/>
+        <location filename="../appearancepage.cpp" line="68"/>
         <source>Edit</source>
         <translation>Изменить</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="66"/>
+        <location filename="../appearancepage.cpp" line="69"/>
         <source>Create a Copy</source>
         <translation>Создать копию</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="67"/>
+        <location filename="../appearancepage.cpp" line="70"/>
         <source>Rename</source>
         <translation>Переименовать</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="69"/>
+        <location filename="../appearancepage.cpp" line="72"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="116"/>
-        <location filename="../appearancepage.cpp" line="189"/>
-        <location filename="../appearancepage.cpp" line="224"/>
+        <location filename="../appearancepage.cpp" line="122"/>
+        <location filename="../appearancepage.cpp" line="196"/>
+        <location filename="../appearancepage.cpp" line="231"/>
         <source>Enter Color Scheme Name</source>
         <translation>Введите имя цветовой схемы</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="116"/>
-        <location filename="../appearancepage.cpp" line="189"/>
-        <location filename="../appearancepage.cpp" line="224"/>
+        <location filename="../appearancepage.cpp" line="122"/>
+        <location filename="../appearancepage.cpp" line="196"/>
+        <location filename="../appearancepage.cpp" line="231"/>
         <source>File name:</source>
         <translation>Имя файла:</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="125"/>
-        <location filename="../appearancepage.cpp" line="200"/>
-        <location filename="../appearancepage.cpp" line="234"/>
+        <location filename="../appearancepage.cpp" line="131"/>
+        <location filename="../appearancepage.cpp" line="207"/>
+        <location filename="../appearancepage.cpp" line="241"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="125"/>
-        <location filename="../appearancepage.cpp" line="200"/>
-        <location filename="../appearancepage.cpp" line="234"/>
+        <location filename="../appearancepage.cpp" line="131"/>
+        <location filename="../appearancepage.cpp" line="207"/>
+        <location filename="../appearancepage.cpp" line="241"/>
         <source>The color scheme &quot;%1&quot; already exists</source>
         <translation>Цветовая схема &quot;%1&quot; уже существует</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="143"/>
-        <location filename="../appearancepage.cpp" line="165"/>
-        <location filename="../appearancepage.cpp" line="219"/>
+        <location filename="../appearancepage.cpp" line="149"/>
+        <location filename="../appearancepage.cpp" line="172"/>
+        <location filename="../appearancepage.cpp" line="226"/>
         <source>Warning</source>
         <translation>Предупреждение</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="143"/>
-        <location filename="../appearancepage.cpp" line="165"/>
-        <location filename="../appearancepage.cpp" line="219"/>
+        <location filename="../appearancepage.cpp" line="149"/>
+        <location filename="../appearancepage.cpp" line="172"/>
+        <location filename="../appearancepage.cpp" line="226"/>
         <source>The color scheme &quot;%1&quot; is read only</source>
         <translation>Цветовая схема &quot;%1&quot; доступна только для чтения</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="170"/>
+        <location filename="../appearancepage.cpp" line="177"/>
         <source>Confirm Remove</source>
         <translation>Подтвердите удаление</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="171"/>
+        <location filename="../appearancepage.cpp" line="178"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
         <translation>Вы уверены, что хотите удалить цветовую схему &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="191"/>
+        <location filename="../appearancepage.cpp" line="198"/>
         <source>%1 (copy)</source>
         <translation>%1 (копия)</translation>
     </message>
@@ -247,12 +247,12 @@
         <translation>Удалить fonts.conf</translation>
     </message>
     <message>
-        <location filename="../fontspage.cpp" line="111"/>
+        <location filename="../fontspage.cpp" line="115"/>
         <source>Remove Font Configuration</source>
         <translation>Удалить настройку шрифтов</translation>
     </message>
     <message>
-        <location filename="../fontspage.cpp" line="112"/>
+        <location filename="../fontspage.cpp" line="116"/>
         <source>Are you sure you want to delete &lt;i&gt;%1&lt;/i&gt;?</source>
         <translation>Вы уверены, что хотите удалить &lt;i&gt;%1&lt;/i&gt;?</translation>
     </message>
@@ -596,56 +596,79 @@
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../qsspage.cpp" line="97"/>
+        <location filename="../qsspage.cpp" line="102"/>
         <source>File name:</source>
         <translation>Имя файла:</translation>
     </message>
     <message>
-        <location filename="../qsspage.cpp" line="97"/>
+        <location filename="../qsspage.cpp" line="102"/>
         <source>Enter Style Sheet Name</source>
         <translation>Введите имя таблицы стилей</translation>
     </message>
     <message>
-        <location filename="../qsspage.cpp" line="108"/>
-        <location filename="../qsspage.cpp" line="200"/>
-        <location filename="../qsspage.cpp" line="211"/>
+        <location filename="../qsspage.cpp" line="113"/>
+        <location filename="../qsspage.cpp" line="205"/>
+        <location filename="../qsspage.cpp" line="216"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../qsspage.cpp" line="108"/>
+        <location filename="../qsspage.cpp" line="113"/>
         <source>The file &quot;%1&quot; already exists</source>
         <translation>Файл &quot;%1&quot; уже существует</translation>
     </message>
     <message>
-        <location filename="../qsspage.cpp" line="142"/>
+        <location filename="../qsspage.cpp" line="147"/>
         <source>Confirm Remove</source>
         <translation>Подтвердите удаление</translation>
     </message>
     <message>
-        <location filename="../qsspage.cpp" line="143"/>
+        <location filename="../qsspage.cpp" line="148"/>
         <source>Are you sure you want to remove style sheet &quot;%1&quot;?</source>
         <translation>Вы уверены, что хотите удалить таблицу стилей &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location filename="../qsspage.cpp" line="193"/>
+        <location filename="../qsspage.cpp" line="198"/>
         <source>Rename Style Sheet</source>
         <translation>Переименовать таблицу стилей</translation>
     </message>
     <message>
-        <location filename="../qsspage.cpp" line="193"/>
+        <location filename="../qsspage.cpp" line="198"/>
         <source>Style sheet name:</source>
         <translation>Имя таблицы стилей:</translation>
     </message>
     <message>
-        <location filename="../qsspage.cpp" line="200"/>
+        <location filename="../qsspage.cpp" line="205"/>
         <source>The style sheet &quot;%1&quot; already exists</source>
         <translation>Таблица стилей с именем &quot;%1&quot; уже существует</translation>
     </message>
     <message>
-        <location filename="../qsspage.cpp" line="211"/>
+        <location filename="../qsspage.cpp" line="216"/>
         <source>Unable to rename file</source>
         <translation>Невозможно переименовать файл</translation>
+    </message>
+</context>
+<context>
+    <name>main</name>
+    <message>
+        <location filename="../main.cpp" line="60"/>
+        <source>Please remove the &lt;b&gt;QT_STYLE_OVERRIDE&lt;/b&gt; environment variable</source>
+        <translation>Пожалуйста, удалите переменную среды &lt;b&gt;QT_STYLE_OVERRIDE&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="65"/>
+        <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly</source>
+        <translation>Переменная среды  &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; установлена неправильно</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="71"/>
+        <source>Unable to find &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</source>
+        <translation>Не найден &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="76"/>
+        <source>Error</source>
+        <translation>Ошибка</translation>
     </message>
 </context>
 </TS>

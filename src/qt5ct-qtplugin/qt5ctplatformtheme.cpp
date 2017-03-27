@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2015, Ilya Kotov <forkotov02@hotmail.ru>
+ * Copyright (c) 2014-2017, Ilya Kotov <forkotov02@hotmail.ru>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -29,39 +29,54 @@
 #include <QVariant>
 #include <QSettings>
 #include <QGuiApplication>
-#include <QDebug>
 #include <QScreen>
 #include <QFont>
 #include <QPalette>
 #include <QTimer>
 #include <QIcon>
+#include <QRegExp>
 #ifdef QT_WIDGETS_LIB
 #include <QStyle>
+#include <QStyleFactory>
 #include <QApplication>
 #include <QWidget>
 #endif
 #include <QFile>
 #include <QFileSystemWatcher>
+#if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
+#include <private/qdbustrayicon_p.h>
+#endif
 
 #include <qt5ct/qt5ct.h>
-#include "qt5ctproxystyle.h"
 #include "qt5ctplatformtheme.h"
+
+Q_LOGGING_CATEGORY(lqt5ct, "qt5ct")
 
 //QT_QPA_PLATFORMTHEME=qt5ct
 
 Qt5CTPlatformTheme::Qt5CTPlatformTheme()
 {
     m_customPalette = 0;
-    readSettings();
-    QMetaObject::invokeMethod(this, "applySettings", Qt::QueuedConnection);
-#ifdef QT_WIDGETS_LIB
-    QMetaObject::invokeMethod(this, "createFSWatcher", Qt::QueuedConnection);
-    //apply custom style hints before creating QApplication
-    //using Fusion style should avoid problems with some styles like qtcurve
-    QApplication::setStyle(new Qt5CTProxyStyle("Fusion"));
+    m_update = false;
+    m_usePalette = true;
+#if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
+    m_dbusTrayAvailable = false;
+    m_checkDBusTray = true;
 #endif
-    QGuiApplication::setFont(m_generalFont);
-    qDebug("using qt5ct plugin");
+    if(QGuiApplication::desktopSettingsAware())
+    {
+        readSettings();
+        QMetaObject::invokeMethod(this, "applySettings", Qt::QueuedConnection);
+#ifdef QT_WIDGETS_LIB
+        QMetaObject::invokeMethod(this, "createFSWatcher", Qt::QueuedConnection);
+#endif
+        QGuiApplication::setFont(m_generalFont);
+    }
+    qCDebug(lqt5ct) << "using qt5ct plugin";
+#ifdef QT_WIDGETS_LIB
+    if(!QStyleFactory::keys().contains("qt5ct-style"))
+        qCCritical(lqt5ct) << "unable to find qt5ct proxy style";
+#endif
 }
 
 Qt5CTPlatformTheme::~Qt5CTPlatformTheme()
@@ -70,11 +85,24 @@ Qt5CTPlatformTheme::~Qt5CTPlatformTheme()
         delete m_customPalette;
 }
 
+#if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
+QPlatformSystemTrayIcon *Qt5CTPlatformTheme::createPlatformSystemTrayIcon() const
+{
+    if(m_checkDBusTray)
+    {
+        QDBusMenuConnection conn;
+        m_dbusTrayAvailable = conn.isStatusNotifierHostRegistered();
+        m_checkDBusTray = false;
+        qCDebug(lqt5ct) << "D-Bus system tray:" << (m_dbusTrayAvailable ? "yes" : "no");
+    }
+    return (m_dbusTrayAvailable ? new QDBusTrayIcon() : 0);
+}
+#endif
+
 const QPalette *Qt5CTPlatformTheme::palette(QPlatformTheme::Palette type) const
 {
-    if(m_customPalette)
-        return m_customPalette;
-    return QPlatformTheme::palette(type);
+    Q_UNUSED(type);
+    return (m_usePalette ? m_customPalette : 0);
 }
 
 const QFont *Qt5CTPlatformTheme::font(QPlatformTheme::Font type) const
@@ -95,7 +123,7 @@ QVariant Qt5CTPlatformTheme::themeHint(QPlatformTheme::ThemeHint hint) const
     case QPlatformTheme::SystemIconThemeName:
         return m_iconTheme;
     case QPlatformTheme::StyleNames:
-        return QStringList() << m_style;
+        return QStringList() << "qt5ct-style";
     case QPlatformTheme::IconThemeSearchPaths:
         return Qt5CT::iconPaths();
     case DialogButtonBoxLayout:
@@ -109,24 +137,46 @@ QVariant Qt5CTPlatformTheme::themeHint(QPlatformTheme::ThemeHint hint) const
 
 void Qt5CTPlatformTheme::applySettings()
 {
+    if(!QGuiApplication::desktopSettingsAware())
+        return;
+
+    if(!m_update)
+    {
+        //do not override application palette
+        if(QCoreApplication::testAttribute(Qt::AA_SetPalette))
+        {
+            m_usePalette = false;
+            qCDebug(lqt5ct) << "palette support is disabled";
+        }
+    }
+
 #ifdef QT_WIDGETS_LIB
     if(hasWidgets())
     {
-        //do not override proxy style (fixes crash in qupzilla)
-        QProxyStyle *proxyStyle = qobject_cast<QProxyStyle *>(qApp->style());
-        proxyStyle ? proxyStyle->setBaseStyle(0) : qApp->setStyle(new Qt5CTProxyStyle(m_style));
         qApp->setFont(m_generalFont);
-        if(m_customPalette)
-            qApp->setPalette(*m_customPalette);
-        else
-            qApp->setPalette(qApp->style()->standardPalette());
 
-        qApp->setStyleSheet(m_userStyleSheet);
+        if(m_update && qApp->style()->objectName() == "qt5ct-style") //ignore application style
+            qApp->setStyle("qt5ct-style"); //recreate style object
+            
+        if(m_update && m_usePalette)
+        {
+            if(m_customPalette)
+                qApp->setPalette(*m_customPalette);
+            else
+                qApp->setPalette(qApp->style()->standardPalette());
+        }
+
+        //do not override application style
+        if(m_prevStyleSheet == qApp->styleSheet())
+            qApp->setStyleSheet(m_userStyleSheet);
+        else
+            qCDebug(lqt5ct) << "custom style sheet is disabled";
+        m_prevStyleSheet = m_userStyleSheet;
     }
 #endif
     QGuiApplication::setFont(m_generalFont); //apply font
     QIcon::setThemeName(m_iconTheme); //apply icons
-    if(m_customPalette)
+    if(m_customPalette && m_usePalette)
         QGuiApplication::setPalette(*m_customPalette); //apply palette
 
 #ifdef QT_WIDGETS_LIB
@@ -139,6 +189,9 @@ void Qt5CTPlatformTheme::applySettings()
         }
     }
 #endif
+
+    if(!m_update)
+        m_update = true;
 }
 
 #ifdef QT_WIDGETS_LIB
@@ -156,7 +209,7 @@ void Qt5CTPlatformTheme::createFSWatcher()
 
 void Qt5CTPlatformTheme::updateSettings()
 {
-    qDebug("Qt5CTPlatformTheme: updating settings..");
+    qCDebug(lqt5ct) << "updating settings..";
     readSettings();
     applySettings();
 }
@@ -245,6 +298,9 @@ QString Qt5CTPlatformTheme::loadStyleSheets(const QStringList &paths)
         file.open(QIODevice::ReadOnly);
         content.append(file.readAll());
     }
+    QRegExp regExp("//.*(\\n|$)");
+    regExp.setMinimal(true);
+    content.remove(regExp);
     return content;
 }
 

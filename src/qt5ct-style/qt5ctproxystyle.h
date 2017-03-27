@@ -26,32 +26,25 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef ICONTHEMEPAGE_H
-#define ICONTHEMEPAGE_H
+#ifndef QT5CTPROXYSTYLE_H
+#define QT5CTPROXYSTYLE_H
 
-#include <QIcon>
-#include "tabpage.h"
+#include <QProxyStyle>
 
-namespace Ui {
-class IconThemePage;
-}
-
-class IconThemePage : public TabPage
+class Qt5CTProxyStyle : public QProxyStyle
 {
     Q_OBJECT
-
 public:
-    explicit IconThemePage(QWidget *parent = 0);
-    ~IconThemePage();
+    explicit Qt5CTProxyStyle(const QString &key);
 
-    void writeSettings();
+    virtual ~Qt5CTProxyStyle();
+
+    int styleHint(StyleHint hint, const QStyleOption *option, const QWidget *widget, QStyleHintReturn *returnData) const;
 
 private:
-    void readSettings();
-    void loadThemes();
-    void loadTheme(const QString &path);
-    QIcon findIcon(const QString &themePath, int size, const QString &name);
-    Ui::IconThemePage *m_ui;
+    int m_dialogButtonsHaveIcons;
+    int m_activateItemOnSingleClick;
+
 };
 
-#endif // ICONTHEMEPAGE_H
+#endif // QT5CTPROXYSTYLE_H

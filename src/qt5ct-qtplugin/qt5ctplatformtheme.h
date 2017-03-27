@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2015, Ilya Kotov <forkotov02@hotmail.ru>
+ * Copyright (c) 2014-2017, Ilya Kotov <forkotov02@hotmail.ru>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -33,8 +33,10 @@
 #include <QObject>
 #include <QFont>
 #include <QPalette>
+#include <QLoggingCategory>
 
 class QPalette;
+class QPlatformSystemTrayIcon;
 
 class Qt5CTPlatformTheme : public QObject, public QPlatformTheme
 {
@@ -51,6 +53,9 @@ public:
     //virtual void showPlatformMenuBar() {}
     //virtual bool usePlatformNativeDialog(DialogType type) const;
     //virtual QPlatformDialogHelper *createPlatformDialogHelper(DialogType type) const;
+#if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
+    virtual QPlatformSystemTrayIcon *createPlatformSystemTrayIcon() const;
+#endif
     virtual const QPalette *palette(Palette type = SystemPalette) const;
     virtual const QFont *font(Font type = SystemFont) const;
     virtual QVariant themeHint(ThemeHint hint) const;
@@ -76,13 +81,22 @@ private:
 #endif
     QString loadStyleSheets(const QStringList &paths);
     QPalette loadColorScheme(const QString &filePath);
-    QString m_style, m_iconTheme, m_userStyleSheet;
+    QString m_style, m_iconTheme, m_userStyleSheet, m_prevStyleSheet;
     QPalette *m_customPalette;
     QFont m_generalFont, m_fixedFont;
     int m_doubleClickInterval;
     int m_cursorFlashTime;
     int m_uiEffects;
     int m_buttonBoxLayout;
+    bool m_update;
+    bool m_usePalette;
+#if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
+    mutable bool m_dbusTrayAvailable;
+    mutable bool m_checkDBusTray;
+#endif
+
 };
+
+Q_DECLARE_LOGGING_CATEGORY(lqt5ct)
 
 #endif // QT5CTPLATFORMTHEME_H

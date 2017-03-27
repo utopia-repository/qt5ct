@@ -1,8 +1,63 @@
-qt5ct (0.21-1~bpo8+1) jessie-backports; urgency=medium
+qt5ct (0.30-2) unstable; urgency=medium
 
-  * Rebuild for jessie-backports.
+  * Fix FTBFS on non-linux arches.
 
- -- Mateusz Łukasik <mati75@linuxmint.pl>  Sun, 24 Jan 2016 13:21:28 +0100
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Sun, 12 Feb 2017 09:02:54 +0100
+
+qt5ct (0.30-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Sun, 05 Feb 2017 19:49:05 +0100
+
+qt5ct (0.29-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/control: Add qt5-style-plugins to suggests.
+  * Add qt5ct-fix-color-scheme.patch
+    (https://sourceforge.net/p/qt5ct/tickets/32/)
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Sat, 28 Jan 2017 14:02:31 +0100
+
+qt5ct (0.27-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump debhelper version to 10.
+  * Update B-D.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Mon, 26 Sep 2016 15:36:09 +0200
+
+qt5ct (0.26-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Tue, 06 Sep 2016 11:54:55 +0200
+
+qt5ct (0.25-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Sun, 21 Aug 2016 20:24:30 +0200
+
+qt5ct (0.24-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Sat, 04 Jun 2016 21:11:16 +0200
+
+qt5ct (0.23-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.8. (no changes needed)
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Thu, 19 May 2016 10:24:18 +0200
+
+qt5ct (0.22-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Tue, 08 Mar 2016 22:00:01 +0100
+>>>>>>> master
 
 qt5ct (0.21-1) unstable; urgency=medium
 

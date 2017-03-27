@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2015, Ilya Kotov <forkotov02@hotmail.ru>
+ * Copyright (c) 2014-2017, Ilya Kotov <forkotov02@hotmail.ru>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -33,6 +33,7 @@
 #include <QInputDialog>
 #include <QMessageBox>
 #include <QMenu>
+#include <QIcon>
 #include "qt5ct.h"
 #include "appearancepage.h"
 #include "paletteeditdialog.h"
@@ -46,7 +47,9 @@ AppearancePage::AppearancePage(QWidget *parent) :
     m_selectedStyle = 0;
 
     m_ui->setupUi(this);
-    m_ui->styleComboBox->addItems(QStyleFactory::keys());
+    QStringList keys = QStyleFactory::keys();
+    keys.removeAll("qt5ct-style"); //hide qt5ct proxy style
+    m_ui->styleComboBox->addItems(keys);
 
     connect(m_ui->paletteComboBox, SIGNAL(activated(int)), SLOT(updatePalette()));
     connect(m_ui->customPaletteButton, SIGNAL(clicked()), SLOT(updatePalette()));
@@ -61,13 +64,16 @@ AppearancePage::AppearancePage(QWidget *parent) :
     w->move(10, 10);
 
     QMenu *menu = new QMenu(this);
-    menu->addAction(tr("Create"), this, SLOT(createColorScheme()));
+    menu->addAction(QIcon::fromTheme("list-add"), tr("Create"), this, SLOT(createColorScheme()));
     m_changeColorSchemeAction = menu->addAction(tr("Edit"), this, SLOT(changeColorScheme()));
     menu->addAction(tr("Create a Copy"), this, SLOT(copyColorScheme()));
     m_renameColorSchemeAction = menu->addAction(tr("Rename"), this, SLOT(renameColorScheme()));
     menu->addSeparator();
     m_removeColorSchemeAction = menu->addAction(tr("Remove"), this, SLOT(removeColorScheme()));
     m_ui->colorSchemeButton->setMenu(menu);
+
+    m_changeColorSchemeAction->setIcon(QIcon::fromTheme("accessories-text-editor"));
+    m_removeColorSchemeAction->setIcon(QIcon::fromTheme("list-remove"));
     connect(menu, SIGNAL(aboutToShow()), SLOT(updateActions()));
 
     readSettings();
@@ -146,12 +152,13 @@ void AppearancePage::changeColorScheme()
     }
 
     PaletteEditDialog d(m_customPalette, m_selectedStyle, this);
+    connect(&d, SIGNAL(paletteChanged(QPalette)), SLOT(setPreviewPalette(QPalette)));
     if(d.exec() == QDialog::Accepted)
     {
         m_customPalette = d.selectedPalette();
         createColorScheme(m_ui->colorSchemeComboBox->currentData().toString(), m_customPalette);
-        updatePalette();
     }
+    updatePalette();
 }
 
 void AppearancePage::removeColorScheme()
@@ -247,9 +254,14 @@ void AppearancePage::updatePalette()
     if(!m_selectedStyle)
         return;
 
+    setPreviewPalette(m_ui->customPaletteButton->isChecked() ?
+                          m_customPalette : m_selectedStyle->standardPalette());
+}
+
+void AppearancePage::setPreviewPalette(const QPalette &p)
+{
     QPalette previewPalette = palette();
-    QPalette currentPalette = m_ui->customPaletteButton->isChecked() ?
-                m_customPalette : m_selectedStyle->standardPalette();
+
     QPalette::ColorGroup colorGroup = QPalette::Disabled;
 
     if(m_ui->paletteComboBox->currentIndex() == 0)
@@ -264,8 +276,8 @@ void AppearancePage::updatePalette()
     for (int i = 0; i < QPalette::NColorRoles; i++)
     {
         QPalette::ColorRole role = QPalette::ColorRole(i);
-        previewPalette.setColor(QPalette::Active, role, currentPalette.color(colorGroup, role));
-        previewPalette.setColor(QPalette::Inactive, role, currentPalette.color(colorGroup, role));
+        previewPalette.setColor(QPalette::Active, role, p.color(colorGroup, role));
+        previewPalette.setColor(QPalette::Inactive, role, p.color(colorGroup, role));
     }
 
     setPalette(m_ui->mdiArea, previewPalette);

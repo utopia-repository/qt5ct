@@ -2,16 +2,19 @@ Source: qt5ct
 Section: utils
 Priority: extra
 Maintainer: Mateusz Łukasik <mati75@linuxmint.pl>
-Build-Depends: debhelper (>= 9), qtbase5-dev, libqt5svg5-dev,
- qttools5-dev-tools, qtbase5-private-dev
-Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 10), qtbase5-dev, libqt5svg5-dev,
+ qttools5-dev-tools, qtbase5-private-dev, libfontconfig1-dev,
+ libfreetype6-dev, libglib2.0-dev, libxrender-dev,
+ libmtdev-dev [linux-any], libegl1-mesa-dev
+Standards-Version: 3.9.8
 Homepage: http://sourceforge.net/projects/qt5ct/
-Vcs-Git: git://github.com/mati75/qt5ct.git
+Vcs-Git: https://github.com/mati75/qt5ct.git
 Vcs-Browser: https://github.com/mati75/qt5ct.git
 
 Package: qt5ct
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: qt5-style-plugins
 Description: Qt5 Configuration Utility
  This utility allows users to configure Qt5 settings (theme, font,
  icons, etc.) under DE/WM without Qt integration.

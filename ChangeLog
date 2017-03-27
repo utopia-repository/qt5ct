@@ -129,3 +129,67 @@ Version 0.21
 * updated Dutch (Netherlands) translation (Heimen Stoffels)
 * updated Czech translation (fri)
 * updated Chinese (Taiwan) translation (Jeff Huang)
+
+Version 0.22
+* disabled html mode in the qss editor
+* fixed issue with overriding style sheets
+* added Hebrew translation (Genghis Khan)
+* updated Italian translation (Luigi Baldoni)
+* updated documentation
+
+Version 0.23
+* added support for single line comments in the style sheets
+* fixed issue with overriding application palette
+* updated Bulgarian translation (Kiril Kirilov)
+
+Version 0.24
+* added feature to preview color scheme on edit
+* added icons for some actions
+* fixed palette editor
+* fixed documentation
+* fixed infinite recursion in the icon theme parser (patch by Sergey A. Sukiyazov)
+* updated Greek translation (Dimitrios Glentadakis)
+
+Version 0.25
+* added environment variables verification
+* added French translation (Geiger David)
+* updated Slovak translation (Ján Ďanovský)
+* updated Russian translation
+* updated Czech translation (fri)
+* updated German translation (Ettore Atalan)
+* updated Dutch (Netherlands) translation (Heimen Stoffels)
+* updated Polish translation (Tomasz Przybył)
+* updated Chinese (Taiwan) translation (Jeff Huang)
+
+Version 0.26
+* fixed stellarium compatibility
+* updated French translation (Geiger David)
+* updated Greek translation (Dimitrios Glentadakis)
+
+Version 0.27
+* added D-Bus tray support
+* added feature to disable debug output
+* updated documentation
+
+Version 0.28
+* added Qt 5.8 support
+* added qt5ct proxy-style plugin
+* added Serbian translation (markosm)
+* updated Bulgarian translation (Kiril Kirilov)
+* updated Italian translation (Luigi Baldoni)
+* updated Russian translation
+* updated Dutch (Netherlands) translation (Heimen Stoffels)
+* updated Czech translation (fri)
+* updated German translation (Atalanttore)
+* updated Chinese (Taiwan) translation (Jeff Huang)
+
+Version 0.29
+* fixed libqt5ct-style.so installation path (Philip Müller)
+* updated Greek translation (Dimitrios Glentadakis)
+
+Version 0.30
+* fixed crash on nonexistent style in qt5ct.conf
+* fixed issue with KDE color themes
+* updated documentation
+* updated Bulgarian translation (Kiril Kirilov)
+* updated French translation (Geiger David)

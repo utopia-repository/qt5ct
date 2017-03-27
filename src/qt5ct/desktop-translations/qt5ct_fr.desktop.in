@@ -19,6 +19,7 @@ Comment=Qt5 Configuration Tool
 
 
 
+
 Exec=qt5ct
 Icon=preferences-desktop-theme
 Terminal=false
@@ -27,6 +28,6 @@ Categories=Settings;DesktopSettings;Qt;
 
 
 # Translations
-Comment[it_IT]=Strumento di configurazione Qt5
-Name[it_IT]=Impostazioni Qt5
-Icon[it_IT]=preferences-desktop-theme
+Comment[fr]=Un outil de configuration de Qt5
+Name[fr]=Paramètres de Qt5
+Icon[fr]=preferences-desktop-theme

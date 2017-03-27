@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2016, Ilya Kotov <forkotov02@hotmail.ru>
+ * Copyright (c) 2014-2017, Ilya Kotov <forkotov02@hotmail.ru>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -25,8 +25,6 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
-#ifdef QT_WIDGETS_LIB
 
 #include <QSettings>
 #include <qt5ct/qt5ct.h>
@@ -63,5 +61,3 @@ int Qt5CTProxyStyle::styleHint(QStyle::StyleHint hint, const QStyleOption *optio
     }
     return QProxyStyle::styleHint(hint, option, widget, returnData);
 }
-
-#endif //QT_WIDGETS_LIB
