@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl">
+<TS version="2.1" language="ar">
 <context>
     <name>AppearancePage</name>
     <message>
         <location filename="../appearancepage.ui" line="20"/>
         <source>Style:</source>
-        <translation>Styl:</translation>
+        <translation>أسلوب:</translation>
     </message>
     <message>
         <location filename="../appearancepage.ui" line="27"/>
         <source>Preview</source>
-        <translation>Podgląd</translation>
+        <translation>مشاهدة</translation>
     </message>
     <message>
         <location filename="../appearancepage.ui" line="34"/>
         <source>Active palette</source>
-        <translation>Aktywna paleta</translation>
+        <translation>اللوحة النشطة</translation>
     </message>
     <message>
         <location filename="../appearancepage.ui" line="39"/>
         <source>Inactive palette</source>
-        <translation>Nieakatywna paleta</translation>
+        <translation>اللوحة الغير نشطة</translation>
     </message>
     <message>
         <location filename="../appearancepage.ui" line="44"/>
         <source>Disabled palette</source>
-        <translation>Wyłączona paleta</translation>
+        <translation>اللوحة الغير مفعلة</translation>
     </message>
     <message>
         <location filename="../appearancepage.ui" line="91"/>
         <source>Palette</source>
-        <translation>Paleta</translation>
+        <translation>لوحة الالوان</translation>
     </message>
     <message>
         <location filename="../appearancepage.ui" line="102"/>
         <source>Default</source>
-        <translation>Domyślnie</translation>
+        <translation>افتراضي</translation>
     </message>
     <message>
         <location filename="../appearancepage.ui" line="112"/>
         <source>Custom</source>
-        <translation>Zaawansowany</translation>
+        <translation>تخصيص</translation>
     </message>
     <message>
         <location filename="../appearancepage.ui" line="139"/>
         <source>Color scheme:</source>
-        <translation>Schemat kolorów:</translation>
+        <translation>نظام الألوان:</translation>
     </message>
     <message>
         <location filename="../appearancepage.ui" line="162"/>
@@ -56,84 +56,84 @@
     <message>
         <location filename="../appearancepage.cpp" line="65"/>
         <source>Create</source>
-        <translation>Stwórz</translation>
+        <translation>إنشاء</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="66"/>
         <source>Edit</source>
-        <translation>Edycja</translation>
+        <translation>تحرير</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="67"/>
         <source>Create a Copy</source>
-        <translation>Stwórz kopię</translation>
+        <translation>انشئ نسخة</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="68"/>
         <source>Rename</source>
-        <translation>Zmień nazwę</translation>
+        <translation>اعد التسمية</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="70"/>
         <source>Remove</source>
-        <translation>Usuń</translation>
+        <translation>حذف</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="120"/>
         <location filename="../appearancepage.cpp" line="194"/>
         <location filename="../appearancepage.cpp" line="229"/>
         <source>Enter Color Scheme Name</source>
-        <translation>Wprowadź nazwę schematu kolorów</translation>
+        <translation>ادخل إسما لنظام الالوان</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="120"/>
         <location filename="../appearancepage.cpp" line="194"/>
         <location filename="../appearancepage.cpp" line="229"/>
         <source>File name:</source>
-        <translation>Nazwa pliku:</translation>
+        <translation>اسم الملف</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="129"/>
         <location filename="../appearancepage.cpp" line="205"/>
         <location filename="../appearancepage.cpp" line="239"/>
         <source>Error</source>
-        <translation>Błąd</translation>
+        <translation>خطأ</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="129"/>
         <location filename="../appearancepage.cpp" line="205"/>
         <location filename="../appearancepage.cpp" line="239"/>
         <source>The color scheme &quot;%1&quot; already exists</source>
-        <translation>Schemat kolorów &quot;%1&quot; już istnieje</translation>
+        <translation>نظام الالوان &quot;%1&quot; موجود أصلا</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="147"/>
         <location filename="../appearancepage.cpp" line="170"/>
         <location filename="../appearancepage.cpp" line="224"/>
         <source>Warning</source>
-        <translation>Ostrzeżenie</translation>
+        <translation>تحذير</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="147"/>
         <location filename="../appearancepage.cpp" line="170"/>
         <location filename="../appearancepage.cpp" line="224"/>
         <source>The color scheme &quot;%1&quot; is read only</source>
-        <translation>Schemat kolorów &quot;%1&quot; jest tylko do odczytu</translation>
+        <translation>نظام الالوان &quot;%1&quot; للقراءة فقط</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="175"/>
         <source>Confirm Remove</source>
-        <translation>Potwierdź usunięcie</translation>
+        <translation>تأكيد الحذف</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="176"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
-        <translation>Czy na pewno chcesz usunąć schemat koloru &quot;%1&quot;?</translation>
+        <translation>هل أنت متأكد أنك تريد إزالة نظام الألوان &quot;%1&quot;؟</translation>
     </message>
     <message>
         <location filename="../appearancepage.cpp" line="196"/>
         <source>%1 (copy)</source>
-        <translation>%1 (copy)</translation>
+        <translation>%1 (نسخة)</translation>
     </message>
 </context>
 <context>
@@ -142,78 +142,78 @@
         <location filename="../fontconfigdialog.ui" line="14"/>
         <location filename="../fontconfigdialog.cpp" line="73"/>
         <source>Font Configuration</source>
-        <translation>Ustawienia czcionki</translation>
+        <translation>تكوين الخط</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="29"/>
         <source>Disable automatic hinting for bold fonts</source>
-        <translation>Wyłącz automatyczne wygładzanie pogrubionych czcionek</translation>
+        <translation>تعطيل تلقائي لتلمسحات الخطوط العريضة</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="36"/>
         <source>LCD filter:</source>
-        <translation>Filtr LCD:</translation>
+        <translation>مرشح ال سي دي:</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="43"/>
         <source>Automatic hinting</source>
-        <translation>Automatyczne wygładzanie</translation>
+        <translation>تلميح تلقائي</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="50"/>
         <source>Hinting</source>
-        <translation>Wygładzanie</translation>
+        <translation>تلميح</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="67"/>
         <source>Font resolution:</source>
-        <translation>Rozdzielczość czcionki:</translation>
+        <translation>ابعاد الخط:</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="110"/>
         <source> dpi</source>
-        <translation>DPI</translation>
+        <translation>dpi</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="83"/>
         <source>Subpixel geometry:</source>
-        <translation>Geometria subpixelów:</translation>
+        <translation>هندسة البكسل الفرعي:</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="90"/>
         <source>Antialiasing</source>
-        <translation>Antialiasing</translation>
+        <translation>تنعيم الحواف</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.ui" line="97"/>
         <source>Hinting style:</source>
-        <translation>Styl wygładzania:</translation>
+        <translation>أسلوب التلميح</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.cpp" line="42"/>
         <location filename="../fontconfigdialog.cpp" line="47"/>
         <source>None</source>
-        <translation>żaden</translation>
+        <translation>لا شيئ</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.cpp" line="43"/>
         <source>Slight</source>
-        <translation>Delikatny</translation>
+        <translation>طفيف</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.cpp" line="44"/>
         <source>Medium</source>
-        <translation>Średni</translation>
+        <translation>متوسط</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.cpp" line="45"/>
         <source>Full</source>
-        <translation>Pełny</translation>
+        <translation>كامل</translation>
     </message>
     <message>
         <location filename="../fontconfigdialog.cpp" line="74"/>
         <source>&lt;i&gt;%1&lt;/i&gt; already exists. Do you want to replace it?</source>
-        <translation>&lt;i&gt;%1&lt;/i&gt; już istnieje. Chcesz go zapisać w tej nazwie?</translation>
+        <translation>&lt;i&gt;%1&lt;/i&gt;  موجود بالفعل. هل تريد استبداله؟</translation>
     </message>
 </context>
 <context>
@@ -229,32 +229,32 @@
     <message>
         <location filename="../fontspage.ui" line="57"/>
         <source>General:</source>
-        <translation>Główny:</translation>
+        <translation>عام:</translation>
     </message>
     <message>
         <location filename="../fontspage.ui" line="94"/>
         <source>Fixed width:</source>
-        <translation>Stała szerokość:</translation>
+        <translation>عرض ثابت:</translation>
     </message>
     <message>
         <location filename="../fontspage.ui" line="119"/>
         <source>Create  fonts.conf</source>
-        <translation>Stwórz fonts.conf</translation>
+        <translation>انشاء fonts.conf</translation>
     </message>
     <message>
         <location filename="../fontspage.ui" line="126"/>
         <source>Remove fonts.conf</source>
-        <translation>Usuń fonts.conf</translation>
+        <translation>حذف fonts.conf</translation>
     </message>
     <message>
         <location filename="../fontspage.cpp" line="115"/>
         <source>Remove Font Configuration</source>
-        <translation>Usuń konfigurację czcionek</translation>
+        <translation>حذف اعدادات الخط</translation>
     </message>
     <message>
         <location filename="../fontspage.cpp" line="116"/>
         <source>Are you sure you want to delete &lt;i&gt;%1&lt;/i&gt;?</source>
-        <translation>Czy chcesz usunąć &lt;i&gt;%1&lt;/i&gt;?</translation>
+        <translation>هل انت متأكد من حذف &lt;i&gt;%1&lt;/i&gt;؟</translation>
     </message>
 </context>
 <context>
@@ -262,33 +262,33 @@
     <message>
         <location filename="../interfacepage.ui" line="35"/>
         <source>Double click interval:</source>
-        <translation>Częstotliwość dwukliku:</translation>
+        <translation>فترة النقر المزدوج:</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="42"/>
         <source>Cursor flash time:</source>
-        <translation>Czas mrugania kursora:</translation>
+        <translation>زمن وميض المؤشر:</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="49"/>
         <source>ComboBox effect:</source>
-        <translation>Efekt ComboBox:</translation>
+        <translation>تأثير صندوق التحرير:</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="56"/>
         <source>ToolTip effect:</source>
-        <translation>Efekt ToolTip:</translation>
+        <translation>تأثير التلميح:</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="63"/>
         <source>ToolBox effect:</source>
-        <translation>Efekt ToolBox:</translation>
+        <translation>تأثير مربع الأدوات:</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="70"/>
         <location filename="../interfacepage.ui" line="80"/>
         <source> ms</source>
-        <translation>ms</translation>
+        <translation>م ث</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="94"/>
@@ -296,7 +296,7 @@
         <location filename="../interfacepage.ui" line="133"/>
         <location filename="../interfacepage.ui" line="157"/>
         <source>Disable</source>
-        <translation>Wyłączony</translation>
+        <translation>تعطيل</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="99"/>
@@ -304,78 +304,78 @@
         <location filename="../interfacepage.ui" line="138"/>
         <location filename="../interfacepage.ui" line="162"/>
         <source>Animate</source>
-        <translation>Animacja</translation>
+        <translation>تحريك</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="121"/>
         <location filename="../interfacepage.ui" line="167"/>
         <source>Fade</source>
-        <translation>Zanikanie</translation>
+        <translation>تلاشي</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="146"/>
         <source>Menu effect:</source>
-        <translation>Efekt Menu:</translation>
+        <translation>تأثير القائمة:</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="175"/>
         <source>Enable gui effects</source>
-        <translation>Włącz efekty interfejsu</translation>
+        <translation>تمكين تأثيرات واجهة المستخدم الرسومية</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="182"/>
         <source>Dialog buttons layout:</source>
-        <translation>Ułożenie przycisków okna dialogowego</translation>
+        <translation>تخطيط أزرار الحوار :</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="192"/>
         <source>Menus have icons</source>
-        <translation>Opcje menu mają ikony</translation>
+        <translation>ايقونات القوائم</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="199"/>
         <source>Dialog buttons have icons</source>
-        <translation>Przyciski okien dialogowych mają ikony</translation>
+        <translation>ايقونات ازرار الحوار</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="209"/>
         <source>Activate item on single-click</source>
-        <translation>Aktywuj elementy jednym kliknięciem</translation>
+        <translation>تفعيل العنصر بنقرة واحدة</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="219"/>
         <source>Toolbar button style:</source>
-        <translation type="unfinished"></translation>
+        <translation>نمط زر شريط الأدوات:</translation>
     </message>
     <message>
         <location filename="../interfacepage.ui" line="229"/>
         <source>Mouse wheel scroll lines:</source>
-        <translation type="unfinished"></translation>
+        <translation>خطوط التمرير لعجلة الماوس :</translation>
     </message>
     <message>
         <location filename="../interfacepage.cpp" line="47"/>
         <source>Only display the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>عرض الرمز فقط</translation>
     </message>
     <message>
         <location filename="../interfacepage.cpp" line="48"/>
         <source>Only display the text</source>
-        <translation type="unfinished"></translation>
+        <translation>عرض النص فقط</translation>
     </message>
     <message>
         <location filename="../interfacepage.cpp" line="49"/>
         <source>The text appears beside the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>اظهر النص بجوار الرمز</translation>
     </message>
     <message>
         <location filename="../interfacepage.cpp" line="50"/>
         <source>The text appears under the icon</source>
-        <translation type="unfinished"></translation>
+        <translation>اظهر النص أسفل الرمز</translation>
     </message>
     <message>
         <location filename="../interfacepage.cpp" line="51"/>
         <source>Follow the application style</source>
-        <translation type="unfinished"></translation>
+        <translation>اتبع نمط التطبيق</translation>
     </message>
 </context>
 <context>
@@ -383,37 +383,37 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>Qt5 Configuration Tool</source>
-        <translation>Narzędzie konfiguracji Qt5</translation>
+        <translation>أداة اعداد Qt5</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="45"/>
         <source>Appearance</source>
-        <translation>Wygląd</translation>
+        <translation>المظهر</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="46"/>
         <source>Fonts</source>
-        <translation>Czcionki</translation>
+        <translation>الخطوط</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="47"/>
         <source>Icon Theme</source>
-        <translation>Temat ikon</translation>
+        <translation>سمة الايقونات</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="48"/>
         <source>Interface</source>
-        <translation>Interfejs</translation>
+        <translation>الواجهة</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="50"/>
         <source>Style Sheets</source>
-        <translation>Arkusze stylów</translation>
+        <translation>انماط الاوراق</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="58"/>
         <source>Version: %1</source>
-        <translation>Wersja: %1</translation>
+        <translation>النسخة: %1</translation>
     </message>
 </context>
 <context>
@@ -421,142 +421,142 @@
     <message>
         <location filename="../paletteeditdialog.ui" line="14"/>
         <source>Palette Editor</source>
-        <translation>Edytor palety</translation>
+        <translation>محرر لوحة الالوان</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.ui" line="79"/>
         <source>Reset palette</source>
-        <translation>Resetuj paletę</translation>
+        <translation>اعادة تعيين لوحة الالوان</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.ui" line="29"/>
         <source>Build inactive palette</source>
-        <translation>Buduj nieaktywną paletę</translation>
+        <translation>توليد لوحة الالوان الغير نشطة</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.ui" line="36"/>
         <source>Build disabled palette</source>
-        <translation>Buduj wyłączoną paletę</translation>
+        <translation>توليد لوحة الالوان الغير مفعلة</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="49"/>
         <source>Active</source>
-        <translation>Aktywna</translation>
+        <translation>نشط</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="49"/>
         <source>Inactive</source>
-        <translation>Nieaktywna</translation>
+        <translation>غير نشط</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="49"/>
         <source>Disabled</source>
-        <translation>Wyłączony</translation>
+        <translation>غير مفعل</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="91"/>
         <source>Dark</source>
-        <translation>Ciemny</translation>
+        <translation>داكن</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="91"/>
         <source>Window text</source>
-        <translation>Tekst okna</translation>
+        <translation>نص النافذة</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="91"/>
         <source>Button background</source>
-        <translation>Tło przycisku</translation>
+        <translation>خلفية الزر</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="91"/>
         <source>Bright</source>
-        <translation>Jasność</translation>
+        <translation>مشرق</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="91"/>
         <source>Less bright</source>
-        <translation>Zmniejsz jasność</translation>
+        <translation>أقل سطوعا</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="91"/>
         <source>Less dark</source>
-        <translation>Zmniejsz ciemność</translation>
+        <translation>أقل دكانة</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="92"/>
         <source>Window</source>
-        <translation>Okno</translation>
+        <translation>النافذة</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="92"/>
         <source>Shadow</source>
-        <translation>Cień</translation>
+        <translation>الظل</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="92"/>
         <source>Bright text</source>
-        <translation>Jasny tekst</translation>
+        <translation>نص المشرق</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="92"/>
         <source>Button text</source>
-        <translation>Tekst przycisku</translation>
+        <translation>مص الزر</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="92"/>
         <source>Normal text</source>
-        <translation>Normalny tekst</translation>
+        <translation>نص عادي</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="92"/>
         <source>Normal background</source>
-        <translation>Normalne tło</translation>
+        <translation>خلفية عادية</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="93"/>
         <source>Highlight</source>
-        <translation>Podświetlenie</translation>
+        <translation>التحويم</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="93"/>
         <source>Highlighted text</source>
-        <translation>Podświetlony tekst</translation>
+        <translation>نص التحويم</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="93"/>
         <source>Visited link</source>
-        <translation>Odwiedzone linki</translation>
+        <translation>ربط تمت زيارته</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="94"/>
         <source>Default</source>
-        <translation>Domyślnie</translation>
+        <translation>افتراضي</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="94"/>
         <source>Tooltip background</source>
-        <translation>Tło podpowiedzi</translation>
+        <translation>خلفية التلميح</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="94"/>
         <source>Tooltip text</source>
-        <translation>Tekst podpowiedzi</translation>
+        <translation>نص التلميح</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="93"/>
         <source>Link</source>
-        <translation>Link</translation>
+        <translation>الرابط</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="94"/>
         <source>Alternate background</source>
-        <translation>Alternatywne tło</translation>
+        <translation>خلفية بديلة</translation>
     </message>
     <message>
         <location filename="../paletteeditdialog.cpp" line="106"/>
         <source>Select Color</source>
-        <translation>Wybrany kolor</translation>
+        <translation>حدد لونا</translation>
     </message>
 </context>
 <context>
@@ -564,32 +564,32 @@
     <message>
         <location filename="../previewform.ui" line="14"/>
         <source>Preview Window</source>
-        <translation>Podgląd okna</translation>
+        <translation>معاينة النافذة</translation>
     </message>
     <message>
         <location filename="../previewform.ui" line="24"/>
         <source>Tab 1</source>
-        <translation>Tab 1</translation>
+        <translation>لسان 1</translation>
     </message>
     <message>
         <location filename="../previewform.ui" line="30"/>
         <source>PushButton</source>
-        <translation>PushButton</translation>
+        <translation>زر</translation>
     </message>
     <message>
         <location filename="../previewform.ui" line="51"/>
         <source>Tab 2</source>
-        <translation>Tab 2</translation>
+        <translation>لسان 2</translation>
     </message>
     <message>
         <location filename="../previewform.ui" line="57"/>
         <source>RadioButton</source>
-        <translation>RadioButton</translation>
+        <translation>زر الاختيار</translation>
     </message>
     <message>
         <location filename="../previewform.ui" line="64"/>
         <source>CheckBox</source>
-        <translation>CheckBox</translation>
+        <translation>زر التحديد</translation>
     </message>
 </context>
 <context>
@@ -597,12 +597,12 @@
     <message>
         <location filename="../qsseditordialog.cpp" line="45"/>
         <source>%1 - Style Sheet Editor</source>
-        <translation>%1 - Edytor arkuszy stylów</translation>
+        <translation>%1 - محرر انماط الاوراق</translation>
     </message>
     <message>
         <location filename="../qsseditordialog.ui" line="14"/>
         <source>Style Sheet Editor</source>
-        <translation>Edytor arkuszy stylów</translation>
+        <translation>محرر انماط الاوراق</translation>
     </message>
 </context>
 <context>
@@ -610,77 +610,77 @@
     <message>
         <location filename="../qsspage.ui" line="23"/>
         <source>Create</source>
-        <translation>Stwórz</translation>
+        <translation>أنشىء</translation>
     </message>
     <message>
         <location filename="../qsspage.ui" line="66"/>
         <location filename="../qsspage.cpp" line="51"/>
         <source>Edit</source>
-        <translation>Edycja</translation>
+        <translation>حرر</translation>
     </message>
     <message>
         <location filename="../qsspage.ui" line="76"/>
         <location filename="../qsspage.cpp" line="52"/>
         <source>Rename</source>
-        <translation>Zmień nazwę</translation>
+        <translation>اعد التسمية</translation>
     </message>
     <message>
         <location filename="../qsspage.ui" line="33"/>
         <location filename="../qsspage.cpp" line="54"/>
         <source>Remove</source>
-        <translation>Usuń</translation>
+        <translation>حذف</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="102"/>
         <source>File name:</source>
-        <translation>Nazwa pliku:</translation>
+        <translation>اسم الملف</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="102"/>
         <source>Enter Style Sheet Name</source>
-        <translation>Wpisz nazwę arkusza stylów</translation>
+        <translation>ادخل اسما لنمط الورقة</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="113"/>
         <location filename="../qsspage.cpp" line="205"/>
         <location filename="../qsspage.cpp" line="216"/>
         <source>Error</source>
-        <translation>Błąd</translation>
+        <translation>خطأ</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="113"/>
         <source>The file &quot;%1&quot; already exists</source>
-        <translation>Plik &quot;%1&quot; istnieje</translation>
+        <translation>هذا الملف &quot;%1&quot; موجود اصلا</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="147"/>
         <source>Confirm Remove</source>
-        <translation>Potwierdź usunięcie</translation>
+        <translation>تأكيد الحذف</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="148"/>
         <source>Are you sure you want to remove style sheet &quot;%1&quot;?</source>
-        <translation>Czy na pewno chcesz usunąć arkusz stylów &quot;%1&quot;?</translation>
+        <translation>هل أنت متأكد أنك تريد إزالة نمط الورقة &quot;%1&quot;؟</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="198"/>
         <source>Rename Style Sheet</source>
-        <translation>Zmień nazwę arkusza stylów</translation>
+        <translation>خذف نمط الورقة</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="198"/>
         <source>Style sheet name:</source>
-        <translation>Nazwa arkusza stylów:</translation>
+        <translation>اسم نمط الورقة:</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="205"/>
         <source>The style sheet &quot;%1&quot; already exists</source>
-        <translation>Arkusz stylów &quot;%1&quot; już istnieje</translation>
+        <translation>نمط الورقة &quot;%1&quot; موجود أصلا</translation>
     </message>
     <message>
         <location filename="../qsspage.cpp" line="216"/>
         <source>Unable to rename file</source>
-        <translation>Nie można zmienić nazwy pliku</translation>
+        <translation>غير قادر على إعادة تسمية الملف</translation>
     </message>
 </context>
 <context>
@@ -688,22 +688,22 @@
     <message>
         <location filename="../main.cpp" line="60"/>
         <source>Please remove the &lt;b&gt;QT_STYLE_OVERRIDE&lt;/b&gt; environment variable</source>
-        <translation>Proszę usunąć zmienną środowiskową &lt;b&gt;QT_STYLE_OVERRIDE&lt;/b&gt;</translation>
+        <translation>الرجاء حذف &lt;b&gt;QT_STYLE_OVERRIDE&lt;/b&gt; متغيرات البيئة</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="65"/>
         <source>The &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; environment variable is not set correctly</source>
-        <translation>Zmienna środowiskowa &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; ma nieprawidłową wartość</translation>
+        <translation> &lt;b&gt;QT_QPA_PLATFORMTHEME&lt;/b&gt; لم يتم تعيين متغير البيئة بشكل صحيح</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Unable to find &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>غير قادر على ايجاد &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="76"/>
         <source>Error</source>
-        <translation>Błąd</translation>
+        <translation>خطأ</translation>
     </message>
 </context>
 </TS>
