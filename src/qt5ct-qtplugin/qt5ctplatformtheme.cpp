@@ -43,12 +43,13 @@
 #endif
 #include <QFile>
 #include <QFileSystemWatcher>
+
+#include <qt5ct/qt5ct.h>
+#include "qt5ctplatformtheme.h"
 #if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
 #include <private/qdbustrayicon_p.h>
 #endif
 
-#include <qt5ct/qt5ct.h>
-#include "qt5ctplatformtheme.h"
 
 Q_LOGGING_CATEGORY(lqt5ct, "qt5ct")
 
@@ -56,13 +57,6 @@ Q_LOGGING_CATEGORY(lqt5ct, "qt5ct")
 
 Qt5CTPlatformTheme::Qt5CTPlatformTheme()
 {
-    m_customPalette = 0;
-    m_update = false;
-    m_usePalette = true;
-#if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
-    m_dbusTrayAvailable = false;
-    m_checkDBusTray = true;
-#endif
     if(QGuiApplication::desktopSettingsAware())
     {
         readSettings();
@@ -120,6 +114,8 @@ QVariant Qt5CTPlatformTheme::themeHint(QPlatformTheme::ThemeHint hint) const
         return m_cursorFlashTime;
     case MouseDoubleClickInterval:
         return m_doubleClickInterval;
+    case QPlatformTheme::ToolButtonStyle:
+        return m_toolButtonStyle;
     case QPlatformTheme::SystemIconThemeName:
         return m_iconTheme;
     case QPlatformTheme::StyleNames:
@@ -130,6 +126,10 @@ QVariant Qt5CTPlatformTheme::themeHint(QPlatformTheme::ThemeHint hint) const
         return m_buttonBoxLayout;
     case QPlatformTheme::UiEffects:
         return m_uiEffects;
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    case QPlatformTheme::WheelScrollLines:
+        return m_wheelScrollLines;
+#endif
     default:
         return QPlatformTheme::themeHint(hint);
     }
@@ -140,6 +140,7 @@ void Qt5CTPlatformTheme::applySettings()
     if(!QGuiApplication::desktopSettingsAware())
         return;
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
     if(!m_update)
     {
         //do not override application palette
@@ -149,15 +150,25 @@ void Qt5CTPlatformTheme::applySettings()
             qCDebug(lqt5ct) << "palette support is disabled";
         }
     }
+#endif
 
 #ifdef QT_WIDGETS_LIB
     if(hasWidgets())
     {
         qApp->setFont(m_generalFont);
 
+        //Qt 5.6 or higher should be use themeHint function on application startup.
+        //So, there is no need to call this function first time.
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+        if(m_update)
+            qApp->setWheelScrollLines(m_wheelScrollLines);
+#else
+        qApp->setWheelScrollLines(m_wheelScrollLines);
+#endif
+
         if(m_update && qApp->style()->objectName() == "qt5ct-style") //ignore application style
             qApp->setStyle("qt5ct-style"); //recreate style object
-            
+
         if(m_update && m_usePalette)
         {
             if(m_customPalette)
@@ -248,6 +259,8 @@ void Qt5CTPlatformTheme::readSettings()
     m_buttonBoxLayout = QPlatformTheme::themeHint(QPlatformTheme::DialogButtonBoxLayout).toInt();
     m_buttonBoxLayout = settings.value("buttonbox_layout", m_buttonBoxLayout).toInt();
     QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus, !settings.value("menus_have_icons", true).toBool());
+    m_toolButtonStyle = settings.value("toolbutton_style", Qt::ToolButtonFollowStyle).toInt();
+    m_wheelScrollLines = settings.value("wheel_scroll_lines", 3).toInt();
 
     //load effects
     m_uiEffects = QPlatformTheme::themeHint(QPlatformTheme::UiEffects).toInt();

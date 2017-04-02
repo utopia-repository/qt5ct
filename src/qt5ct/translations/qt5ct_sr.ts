@@ -54,84 +54,84 @@
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="67"/>
+        <location filename="../appearancepage.cpp" line="65"/>
         <source>Create</source>
         <translation>Креирај</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="68"/>
+        <location filename="../appearancepage.cpp" line="66"/>
         <source>Edit</source>
         <translation>Измени</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="69"/>
+        <location filename="../appearancepage.cpp" line="67"/>
         <source>Create a Copy</source>
         <translation>Креирај копију</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="70"/>
+        <location filename="../appearancepage.cpp" line="68"/>
         <source>Rename</source>
         <translation>Преименуј</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="72"/>
+        <location filename="../appearancepage.cpp" line="70"/>
         <source>Remove</source>
         <translation>Обриши</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="122"/>
-        <location filename="../appearancepage.cpp" line="196"/>
-        <location filename="../appearancepage.cpp" line="231"/>
+        <location filename="../appearancepage.cpp" line="120"/>
+        <location filename="../appearancepage.cpp" line="194"/>
+        <location filename="../appearancepage.cpp" line="229"/>
         <source>Enter Color Scheme Name</source>
         <translation>Унеси име шеме боја</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="122"/>
-        <location filename="../appearancepage.cpp" line="196"/>
-        <location filename="../appearancepage.cpp" line="231"/>
+        <location filename="../appearancepage.cpp" line="120"/>
+        <location filename="../appearancepage.cpp" line="194"/>
+        <location filename="../appearancepage.cpp" line="229"/>
         <source>File name:</source>
         <translation>Име фајла:</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="131"/>
-        <location filename="../appearancepage.cpp" line="207"/>
-        <location filename="../appearancepage.cpp" line="241"/>
+        <location filename="../appearancepage.cpp" line="129"/>
+        <location filename="../appearancepage.cpp" line="205"/>
+        <location filename="../appearancepage.cpp" line="239"/>
         <source>Error</source>
         <translation>Грешка</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="131"/>
-        <location filename="../appearancepage.cpp" line="207"/>
-        <location filename="../appearancepage.cpp" line="241"/>
+        <location filename="../appearancepage.cpp" line="129"/>
+        <location filename="../appearancepage.cpp" line="205"/>
+        <location filename="../appearancepage.cpp" line="239"/>
         <source>The color scheme &quot;%1&quot; already exists</source>
         <translation>Шема боја &quot;%1&quot; већ постоји</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="149"/>
-        <location filename="../appearancepage.cpp" line="172"/>
-        <location filename="../appearancepage.cpp" line="226"/>
+        <location filename="../appearancepage.cpp" line="147"/>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <location filename="../appearancepage.cpp" line="224"/>
         <source>Warning</source>
         <translation>Упозорење</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="149"/>
-        <location filename="../appearancepage.cpp" line="172"/>
-        <location filename="../appearancepage.cpp" line="226"/>
+        <location filename="../appearancepage.cpp" line="147"/>
+        <location filename="../appearancepage.cpp" line="170"/>
+        <location filename="../appearancepage.cpp" line="224"/>
         <source>The color scheme &quot;%1&quot; is read only</source>
         <translation>Шема боја је &quot;%1&quot; само за читање</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="177"/>
+        <location filename="../appearancepage.cpp" line="175"/>
         <source>Confirm Remove</source>
         <translation>Потврди брисање</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="178"/>
+        <location filename="../appearancepage.cpp" line="176"/>
         <source>Are you sure you want to remove color scheme &quot;%1&quot;?</source>
         <translation>Да ли сте сигурни да желите брисање шеме боја &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location filename="../appearancepage.cpp" line="198"/>
+        <location filename="../appearancepage.cpp" line="196"/>
         <source>%1 (copy)</source>
         <translation>%1 (копирај)</translation>
     </message>
@@ -341,6 +341,41 @@
         <location filename="../interfacepage.ui" line="209"/>
         <source>Activate item on single-click</source>
         <translation>Активирај ставку на један клик</translation>
+    </message>
+    <message>
+        <location filename="../interfacepage.ui" line="219"/>
+        <source>Toolbar button style:</source>
+        <translation>Изглед дугмета у траци алата:</translation>
+    </message>
+    <message>
+        <location filename="../interfacepage.ui" line="229"/>
+        <source>Mouse wheel scroll lines:</source>
+        <translation>Линије точкића миша:</translation>
+    </message>
+    <message>
+        <location filename="../interfacepage.cpp" line="47"/>
+        <source>Only display the icon</source>
+        <translation>Прикажи само икону</translation>
+    </message>
+    <message>
+        <location filename="../interfacepage.cpp" line="48"/>
+        <source>Only display the text</source>
+        <translation>Прикажи само текст</translation>
+    </message>
+    <message>
+        <location filename="../interfacepage.cpp" line="49"/>
+        <source>The text appears beside the icon</source>
+        <translation>Текст изнад иконе</translation>
+    </message>
+    <message>
+        <location filename="../interfacepage.cpp" line="50"/>
+        <source>The text appears under the icon</source>
+        <translation>Текст испод иконе</translation>
+    </message>
+    <message>
+        <location filename="../interfacepage.cpp" line="51"/>
+        <source>Follow the application style</source>
+        <translation>Прати изглед апликације</translation>
     </message>
 </context>
 <context>
@@ -663,7 +698,7 @@
     <message>
         <location filename="../main.cpp" line="71"/>
         <source>Unable to find &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Није могуће пронаћи &lt;b&gt;libqt5ct-style.so&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="76"/>
