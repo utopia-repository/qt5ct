@@ -1,3 +1,9 @@
+qt5ct (0.31-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Mon, 03 Apr 2017 10:56:50 +0200
+
 qt5ct (0.31-1) unstable; urgency=medium
 
   * New upstream release.

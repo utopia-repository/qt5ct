@@ -1,2 +1,2 @@
 update-desktop-file.patch
-qt54.patch
+drop-request-qt54.patch
