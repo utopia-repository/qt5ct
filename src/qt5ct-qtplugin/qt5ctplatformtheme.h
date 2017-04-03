@@ -35,6 +35,12 @@
 #include <QPalette>
 #include <QLoggingCategory>
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 5, 0))
+#ifndef QT_NO_SYSTEMTRAYICON
+#define QT_NO_SYSTEMTRAYICON
+#endif
+#endif
+
 class QPalette;
 class QPlatformSystemTrayIcon;
 
@@ -82,17 +88,19 @@ private:
     QString loadStyleSheets(const QStringList &paths);
     QPalette loadColorScheme(const QString &filePath);
     QString m_style, m_iconTheme, m_userStyleSheet, m_prevStyleSheet;
-    QPalette *m_customPalette;
+    QPalette *m_customPalette = nullptr;
     QFont m_generalFont, m_fixedFont;
     int m_doubleClickInterval;
     int m_cursorFlashTime;
     int m_uiEffects;
     int m_buttonBoxLayout;
-    bool m_update;
-    bool m_usePalette;
+    bool m_update = false;
+    bool m_usePalette = true;
+    int m_toolButtonStyle = Qt::ToolButtonFollowStyle;
+    int m_wheelScrollLines = 3;
 #if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
-    mutable bool m_dbusTrayAvailable;
-    mutable bool m_checkDBusTray;
+    mutable bool m_dbusTrayAvailable = false;
+    mutable bool m_checkDBusTray = true;
 #endif
 
 };

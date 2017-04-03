@@ -1,9 +1,8 @@
-qt5ct (0.30-2~bpo8+1) jessie-backports; urgency=medium
+qt5ct (0.31-1) unstable; urgency=medium
 
-  * Rebuild for jessie-backports.
-  * Add upstream patch to fix build with qt 5.4 works also with 5.3.
+  * New upstream release.
 
- -- Mateusz Łukasik <mati75@linuxmint.pl>  Sun, 26 Mar 2017 23:22:05 +0200
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Sun, 02 Apr 2017 19:52:56 +0200
 
 qt5ct (0.30-2) unstable; urgency=medium
 
