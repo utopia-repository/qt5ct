@@ -1,10 +1,10 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: qt5ct
 Source: http://downloads.sourceforge.net/project/qt5ct
-Copyright: 2014-2015, Ilya Kotov <forkorov02@hotmail.ru>
+Copyright: 2014-2017, Ilya Kotov <forkorov02@hotmail.ru>
 
 Files: *
-Copyright: 2014-2015, Ilya Kotov <forkorov02@hotmail.ru>
+Copyright: 2014-2017, Ilya Kotov <forkorov02@hotmail.ru>
 License: BSD-2-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are
@@ -30,7 +30,7 @@ License: BSD-2-clause
  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Files: debian/*
-Copyright: 2015, Mateusz Łukasik <mati75@linuxmint.pl>
+Copyright: 2015-2017, Mateusz Łukasik <mati75@linuxmint.pl>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
