@@ -1,0 +1,1 @@
+debian/99-qt5ct /etc/X11/Xsession.d/
