@@ -46,9 +46,14 @@
 
 #include <qt5ct/qt5ct.h>
 #include "qt5ctplatformtheme.h"
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && !defined(QT_NO_DBUS)
+#include <private/qdbusmenubar_p.h>
+#endif
 #if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
+#include <QDBusArgument>
 #include <private/qdbustrayicon_p.h>
 #endif
+
 
 
 Q_LOGGING_CATEGORY(lqt5ct, "qt5ct")
@@ -79,6 +84,19 @@ Qt5CTPlatformTheme::~Qt5CTPlatformTheme()
         delete m_customPalette;
 }
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0)) && !defined(QT_NO_DBUS)
+QPlatformMenuBar *Qt5CTPlatformTheme::createPlatformMenuBar() const
+{
+    if(m_checkDBusGlobalMenu)
+    {
+        QDBusConnection conn = QDBusConnection::sessionBus();
+        m_dbusGlobalMenuAvailable = conn.interface()->isServiceRegistered("com.canonical.AppMenu.Registrar");
+        qCDebug(lqt5ct) << "D-Bus global menu:" << (m_dbusGlobalMenuAvailable ? "yes" : "no");
+    }
+    return (m_dbusGlobalMenuAvailable ? new QDBusMenuBar() : nullptr);
+}
+#endif
+
 #if !defined(QT_NO_DBUS) && !defined(QT_NO_SYSTEMTRAYICON)
 QPlatformSystemTrayIcon *Qt5CTPlatformTheme::createPlatformSystemTrayIcon() const
 {
@@ -89,14 +107,14 @@ QPlatformSystemTrayIcon *Qt5CTPlatformTheme::createPlatformSystemTrayIcon() cons
         m_checkDBusTray = false;
         qCDebug(lqt5ct) << "D-Bus system tray:" << (m_dbusTrayAvailable ? "yes" : "no");
     }
-    return (m_dbusTrayAvailable ? new QDBusTrayIcon() : 0);
+    return (m_dbusTrayAvailable ? new QDBusTrayIcon() : nullptr);
 }
 #endif
 
 const QPalette *Qt5CTPlatformTheme::palette(QPlatformTheme::Palette type) const
 {
     Q_UNUSED(type);
-    return (m_usePalette ? m_customPalette : 0);
+    return (m_usePalette ? m_customPalette : nullptr);
 }
 
 const QFont *Qt5CTPlatformTheme::font(QPlatformTheme::Font type) const
@@ -295,7 +313,7 @@ void Qt5CTPlatformTheme::readSettings()
 #ifdef QT_WIDGETS_LIB
 bool Qt5CTPlatformTheme::hasWidgets()
 {
-    return qobject_cast<QApplication *> (qApp) != 0;
+    return qobject_cast<QApplication *> (qApp) != nullptr;
 }
 #endif
 
