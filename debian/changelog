@@ -1,9 +1,10 @@
-qt5ct (0.31-2) unstable; urgency=medium
+qt5ct (0.32-1) unstable; urgency=medium
 
   * Initial upload to Debian. (Closes: #822246)
   * Add Lisandro Damián Nicanor Pérez Meyer to Uploaders.
+  * New upstream release.
 
- -- Mateusz Łukasik <mati75@linuxmint.pl>  Tue, 18 Apr 2017 22:56:12 +0200
+ -- Mateusz Łukasik <mati75@linuxmint.pl>  Mon, 15 May 2017 16:11:59 +0200
 
 qt5ct (0.31-1) unstable; urgency=medium
 
