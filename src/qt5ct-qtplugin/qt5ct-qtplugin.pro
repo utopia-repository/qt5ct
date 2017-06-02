@@ -10,7 +10,9 @@ greaterThan(QT_MINOR_VERSION, 7) {
   QT += gui-private platformsupport-private
 }
 
-greaterThan(QT_MINOR_VERSION, 5): QT += dbus
+!contains(DEFINES, QT_NO_DBUS):greaterThan(QT_MINOR_VERSION, 5) {
+    QT += dbus
+}
 
 SOURCES += \
     main.cpp \
@@ -31,4 +33,3 @@ HEADERS += \
 
 target.path = $$PLUGINDIR/platformthemes
 INSTALLS += target
-
