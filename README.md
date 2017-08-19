@@ -2,14 +2,14 @@
 **THIS REPOSITORY IS SOURCE FOR DEBIAN PACKAGE. NOT UPSTREAM REPOSITORY**
 
 # BUG REPORTS
-If you want report bug **DO NOT IT** here. Go [here](https://sourceforge.net/p/qt5ct/tickets/?source=navbar).
+If you want report bug **DO NOT IT** for this repository. I will close all. Go [here](https://sourceforge.net/p/qt5ct/tickets/?source=navbar).
 
 ## How to install on Debian/Ubuntu/Mint etc. deb based.
 
 ### Debian
 qt5ct is candicate to be in official Debian repository. Informations are [here](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=822246).
 
-Before that you can use my [repo](https://repozytorium.mati75.eu/)
+Before that you can use my [repo](https://repozytorium.mati75.eu/). qt5ct is included in {jessie,stretch}-backports and unstable.
 
 ### Ubuntu / Mint / Another Ubuntu based shit
 Use my [ppa](https://launchpad.net/~mati75/+archive/ubuntu/qt5ct):
