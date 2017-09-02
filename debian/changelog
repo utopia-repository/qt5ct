@@ -2,6 +2,8 @@ qt5ct (0.33-1) unstable; urgency=medium
 
   * Initial upload to Debian. (Closes: #822246)
   * Add Lisandro Damián Nicanor Pérez Meyer to Uploaders.
+  * Don't enable qt5ct on KDE, or when another platform theme is set
+  * Bump Standards-Version to 4.1.0.
   * New upstream release.
 
  -- Mateusz Łukasik <mati75@linuxmint.pl>  Sat, 03 Jun 2017 10:33:43 +0200
