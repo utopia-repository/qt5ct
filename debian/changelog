@@ -1,6 +1,10 @@
 qt5ct (0.33-1~utopia2) UNRELEASED; urgency=medium
 
+  [ James Lu ]
   * 99qt5ct: Don't enable qt5ct on KDE, or when another platform theme is set
+
+  [ Mateus Łukasik ]
+  * Bump Standards-Version to 4.1.0.
 
  -- James Lu <bitflip3@gmail.com>  Sat, 02 Sep 2017 11:02:13 -0700
 
