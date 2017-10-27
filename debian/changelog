@@ -4,6 +4,7 @@ qt5ct (0.33-1~utopia2) unstable; urgency=medium
   * Utopia Repository upload.
   * 99qt5ct: Don't enable qt5ct on KDE, or when another platform theme is set
   * Bump Standards-Version to 4.1.1.
+  * d/rules: temporarily add a dh_builddeb override to work around #879718
 
   [ Mateus Łukasik ]
   * Bump Standards-Version to 4.1.0.
