@@ -1,12 +1,14 @@
-qt5ct (0.33-1~utopia2) UNRELEASED; urgency=medium
+qt5ct (0.33-1~utopia2) unstable; urgency=medium
 
   [ James Lu ]
+  * Utopia Repository upload.
   * 99qt5ct: Don't enable qt5ct on KDE, or when another platform theme is set
+  * Bump Standards-Version to 4.1.1.
 
   [ Mateus Łukasik ]
   * Bump Standards-Version to 4.1.0.
 
- -- James Lu <bitflip3@gmail.com>  Sat, 02 Sep 2017 11:02:13 -0700
+ -- James Lu <bitflip3@gmail.com>  Fri, 27 Oct 2017 16:16:01 -0700
 
 qt5ct (0.33-1~utopia1) unstable; urgency=medium
 
