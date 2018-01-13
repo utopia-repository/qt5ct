@@ -1,3 +1,13 @@
+qt5ct (0.34-1~utopia1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+  * Revert "d/rules: temporarily add a dh_builddeb override to work around
+    bug#879718"
+  * Bump S-V to 4.1.3, no changes needed.
+  * Change priority from extra to optional.
+
+ -- James Lu <bitflip3@gmail.com>  Fri, 12 Jan 2018 23:14:32 -0800
+
 qt5ct (0.33-1~utopia2) unstable; urgency=medium
 
   [ James Lu ]

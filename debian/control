@@ -1,13 +1,13 @@
 Source: qt5ct
 Section: utils
-Priority: extra
+Priority: optional
 Maintainer: Mateusz Łukasik <mati75@linuxmint.pl>
 Uploaders: Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
 Build-Depends: debhelper (>= 10), qtbase5-dev, libqt5svg5-dev,
  qttools5-dev-tools, qtbase5-private-dev, libfontconfig1-dev,
  libfreetype6-dev, libglib2.0-dev, libxrender-dev,
  libmtdev-dev [linux-any], libegl1-mesa-dev
-Standards-Version: 4.1.1
+Standards-Version: 4.1.3
 Homepage: https://sourceforge.net/projects/qt5ct/
 Vcs-Git: https://github.com/mati75/qt5ct.git
 Vcs-Browser: https://github.com/mati75/qt5ct.git
