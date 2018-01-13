@@ -9,8 +9,8 @@ Build-Depends: debhelper (>= 10), qtbase5-dev, libqt5svg5-dev,
  libmtdev-dev [linux-any], libegl1-mesa-dev
 Standards-Version: 4.1.3
 Homepage: https://sourceforge.net/projects/qt5ct/
-Vcs-Git: https://github.com/mati75/qt5ct.git
-Vcs-Browser: https://github.com/mati75/qt5ct.git
+Vcs-Git: https://github.com/utopia-repository/qt5ct
+Vcs-Browser: https://github.com/utopia-repository/qt5ct
 
 Package: qt5ct
 Architecture: any
